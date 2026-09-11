@@ -1,0 +1,602 @@
+[
+  {
+    "id": "q001",
+    "question": "What service does OpenStack Networking (neutron) provide?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["neutron_overview_0001"]
+  },
+  {
+    "id": "q002",
+    "question": "What is OpenStack Object Storage (swift)?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_overview_0001"]
+  },
+  {
+    "id": "q003",
+    "question": "What does Nova provide, and which other OpenStack services does it require for basic function?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["nova_overview_0001"]
+  },
+  {
+    "id": "q004",
+    "question": "What does the Keystone identity service provide to API clients?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["keystone_overview_0001"]
+  },
+  {
+    "id": "q005",
+    "question": "What does the Image service (glance) enable users to do?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["glance_install_get-started_0001"]
+  },
+  {
+    "id": "q006",
+    "question": "What does the Key Manager service (barbican) provide?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["barbican_install_get_started_0001"]
+  },
+  {
+    "id": "q007",
+    "question": "What is Heat and what does it orchestrate?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["heat_overview_0001"]
+  },
+  {
+    "id": "q008",
+    "question": "What kind of application is the placement service and what does it use for persistence?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["placement_contributor_architecture_0001"]
+  },
+  {
+    "id": "q009",
+    "question": "In which OpenStack release was Cells v2 first added to Nova, and in which release was Cells v1 removed?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["nova_admin_cells_0001"]
+  },
+  {
+    "id": "q010",
+    "question": "What is the default maximum size of a single uploaded object in Swift before large object support is needed?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_api_large_objects_0001"]
+  },
+  {
+    "id": "q011",
+    "question": "What is the Modular Layer 2 (ML2) plugin in Neutron?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0001"]
+  },
+  {
+    "id": "q012",
+    "question": "What does the Role-Based Access Control (RBAC) policy framework in Neutron enable operators and users to do?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["neutron_admin_config-rbac_0001"]
+  },
+  {
+    "id": "q013",
+    "question": "Which Swift component ties the rest of the Swift architecture together and handles incoming API requests?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_overview_architecture_0001"]
+  },
+  {
+    "id": "q014",
+    "question": "What is the default number of Fernet keys kept in rotation by keystone-manage fernet_rotate?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q015",
+    "question": "How many zones is it recommended to deploy a Swift cluster across for optimal results?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_deployment_guide_0003"]
+  },
+  {
+    "id": "q016",
+    "question": "What are the two networking deployment options presented in the Neutron install overview?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["neutron_install_overview_0003"]
+  },
+  {
+    "id": "q017",
+    "question": "How are storage policies implemented in Swift?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_overview_policies_0001"]
+  },
+  {
+    "id": "q018",
+    "question": "Since which Nova release are Keystone unified limits the recommended way to enforce quotas?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["nova_user_unified-limits_0001"]
+  },
+  {
+    "id": "q019",
+    "question": "What is the maximum number of objects that can be removed in a single Swift bulk-delete request?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["swift_api_object_api_v1_overview_0003"]
+  },
+  {
+    "id": "q020",
+    "question": "Why must Nova send a service token to Cinder, and what change introduced this requirement?",
+    "type": "single_hop",
+    "relevant_chunk_ids": ["cinder_configuration_block-storage_service-token_0001"]
+  },
+  {
+    "id": "q021",
+    "question": "What is the exact term Swift uses for the marker that indicates an object has been deleted?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["swift_overview_architecture_0004"]
+  },
+  {
+    "id": "q022",
+    "question": "What does the abbreviation ML2 stand for in Neutron?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0001"]
+  },
+  {
+    "id": "q023",
+    "question": "What is the maximum length of a Swift object name in bytes?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["swift_api_object_api_v1_overview_0005"]
+  },
+  {
+    "id": "q024",
+    "question": "What is the default directory that contains Keystone Fernet token keys?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q025",
+    "question": "Which nova-manage cell_v2 command creates cell1 during the controller node installation?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0013"]
+  },
+  {
+    "id": "q026",
+    "question": "Which library does Swift use to provide erasure code support?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0001"]
+  },
+  {
+    "id": "q027",
+    "question": "What is the name of the tool used to migrate a JSON-formatted Neutron policy file to YAML?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["neutron_configuration_policy_0001"]
+  },
+  {
+    "id": "q028",
+    "question": "Which query parameters does the Swift object storage API use to paginate listings?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["swift_api_pagination_0001"]
+  },
+  {
+    "id": "q029",
+    "question": "Which keystone-manage command is used to create the initial Fernet key repository?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0049"]
+  },
+  {
+    "id": "q030",
+    "question": "What is the name of the middleware that maps Keystone roles to Swift ACLs?",
+    "type": "exact_terminology",
+    "relevant_chunk_ids": ["swift_overview_auth_0003"]
+  },
+  {
+    "id": "q031",
+    "question": "Which tunnel type_drivers does the Neutron ML2 support matrix list, and which of those does OVN not support?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0002"]
+  },
+  {
+    "id": "q032",
+    "question": "What do the ec_num_data_fragments and ec_num_parity_fragments settings control in a Swift erasure code policy?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0014"]
+  },
+  {
+    "id": "q033",
+    "question": "Which databases must be created on the controller node when installing Nova?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0002"]
+  },
+  {
+    "id": "q034",
+    "question": "What URL and service type are used when creating the Nova Compute API service endpoints?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0006"]
+  },
+  {
+    "id": "q035",
+    "question": "What do the staged, primary, and secondary Fernet keys represent when max_active_keys is set to its default value?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q036",
+    "question": "On which port does the Swift proxy server listen in the Keystone auth configuration example?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["swift_overview_auth_0003"]
+  },
+  {
+    "id": "q037",
+    "question": "How is the placement service scaled, given that its state is managed solely in the database?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["placement_contributor_architecture_0001"]
+  },
+  {
+    "id": "q038",
+    "question": "Which scheduler filters are given as examples for the nova-scheduler?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["nova_admin_scheduling_0001"]
+  },
+  {
+    "id": "q039",
+    "question": "What minimum OVS and OVN versions are required for Neutron SmartNIC DPU support?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["neutron_admin_ovn_smartnic_dpu_0011"]
+  },
+  {
+    "id": "q040",
+    "question": "What is the default Swift large object size limit and how does it relate to the need for segmented uploads?",
+    "type": "technical_detail",
+    "relevant_chunk_ids": ["swift_api_large_objects_0001"]
+  },
+  {
+    "id": "q041",
+    "question": "What is the difference between Fernet and JWS token providers in Keystone?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0049"]
+  },
+  {
+    "id": "q042",
+    "question": "How do provider networks differ from self-service networks in the Neutron deployment options?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["neutron_install_overview_0003"]
+  },
+  {
+    "id": "q043",
+    "question": "How do the primary, staged, and secondary Fernet keys differ in their roles?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q044",
+    "question": "How do the roles of the API database, the cell0 database, and the cell1 database differ in a Nova cells deployment?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["nova_admin_cells_0005"]
+  },
+  {
+    "id": "q045",
+    "question": "What is the difference between Heat's OpenStack-native REST API and its CloudFormation-compatible Query API?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["heat_developing_guides_architecture_0001"]
+  },
+  {
+    "id": "q046",
+    "question": "How does the responsibility of the Swift Container Server differ from that of the Account Server?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["swift_overview_architecture_0004"]
+  },
+  {
+    "id": "q047",
+    "question": "How does OVN's support for tunnel network types compare with SR-IOV's in the Neutron ML2 matrix?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0002"]
+  },
+  {
+    "id": "q048",
+    "question": "What is the difference between the VCPU and PCPU resource classes in Nova unified limits?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["nova_user_unified-limits_0001"]
+  },
+  {
+    "id": "q049",
+    "question": "What is the difference between the ec_num_data_fragments and ec_num_parity_fragments in a Swift erasure code policy?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0014"]
+  },
+  {
+    "id": "q050",
+    "question": "How does Nova's support for virtual machines compare with its support for baremetal servers and system containers?",
+    "type": "comparison",
+    "relevant_chunk_ids": ["nova_overview_0001"]
+  },
+  {
+    "id": "q051",
+    "question": "Why does Nova depend on Keystone, Glance, Neutron, and Placement to function?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["nova_overview_0001"]
+  },
+  {
+    "id": "q052",
+    "question": "Why is Swift described as an eventually consistent object store?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["swift_overview_0001"]
+  },
+  {
+    "id": "q053",
+    "question": "Why is it necessary for Nova to authenticate to Cinder with a service token when performing user actions?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["cinder_configuration_block-storage_service-token_0001"]
+  },
+  {
+    "id": "q054",
+    "question": "Why is it unsafe to run keystone-manage fernet_rotate twice on one node without syncing the other nodes?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q055",
+    "question": "Why does Swift use tombstones rather than immediately removing deleted items?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["swift_overview_architecture_0004"]
+  },
+  {
+    "id": "q056",
+    "question": "Why would an operator or user rely on Neutron RBAC policies to grant access to network resources?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["neutron_admin_config-rbac_0001"]
+  },
+  {
+    "id": "q057",
+    "question": "Why can the placement service be scaled simply by adding more WSGI application instances?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["placement_contributor_architecture_0001"]
+  },
+  {
+    "id": "q058",
+    "question": "Why does the Image service recommend against the file back end for a multi-node glance deployment?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["glance_install_get-started_0001"]
+  },
+  {
+    "id": "q059",
+    "question": "Why does Heat use a declarative template format to describe cloud applications?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["heat_overview_0001"]
+  },
+  {
+    "id": "q060",
+    "question": "Why does the Nova architecture require creating separate api, main, and cell0 databases before the compute service can run?",
+    "type": "reasoning",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0002"]
+  },
+  {
+    "id": "q061",
+    "question": "What are the full steps to set up Nova cells on the controller node, from creating the databases to registering cell1?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0002", "nova_install_controller-install-rdo_0013"]
+  },
+  {
+    "id": "q062",
+    "question": "During the Nova controller installation, how do you create the required databases and then create the Compute API service endpoints?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0002", "nova_install_controller-install-rdo_0006"]
+  },
+  {
+    "id": "q063",
+    "question": "How do you set up and then rotate Keystone Fernet keys, and how many active keys are retained by default?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["keystone_configuration_config-options_0049", "keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q064",
+    "question": "How does the Swift Keystone authentication pipeline work, from the auth_token and keystoneauth middleware to the object-store endpoint?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_auth_0001", "swift_overview_auth_0003"]
+  },
+  {
+    "id": "q065",
+    "question": "How does Swift erasure coding work, and where do the actual erasure code algorithms come from?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0001", "swift_overview_erasure_code_0003"]
+  },
+  {
+    "id": "q066",
+    "question": "How does a Swift erasure code policy work, and what do its data and parity fragment settings configure?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0001", "swift_overview_erasure_code_0014"]
+  },
+  {
+    "id": "q067",
+    "question": "What is Swift container sharding and which tool is used to manage shard ranges?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_container_sharding_0001", "swift_overview_container_sharding_0003"]
+  },
+  {
+    "id": "q068",
+    "question": "How are Swift storage policies implemented with object rings, and which ring file backs the default Policy-0?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_policies_0001", "swift_overview_policies_0006"]
+  },
+  {
+    "id": "q069",
+    "question": "In Swift, how does the proxy-based architecture handle requests, and how are deletes propagated through replication?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_overview_architecture_0001", "swift_overview_architecture_0004"]
+  },
+  {
+    "id": "q070",
+    "question": "In the Swift object storage API, how are an account and a container defined in relation to each other?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["swift_api_object_api_v1_overview_0001", "swift_api_object_api_v1_overview_0002"]
+  },
+  {
+    "id": "q071",
+    "question": "What is the Neutron ML2 framework and which network type drivers and mechanism drivers does its support matrix cover?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0001", "neutron_admin_config-ml2_0002"]
+  },
+  {
+    "id": "q072",
+    "question": "When installing Heat, how do you create the heat and heat-cfn services and then their API endpoints?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["heat_install_install-rdo_0005", "heat_install_install-rdo_0007"]
+  },
+  {
+    "id": "q073",
+    "question": "What does Keystone provide overall, and how does it create the Fernet tokens it issues?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["keystone_overview_0001", "keystone_configuration_config-options_0049"]
+  },
+  {
+    "id": "q074",
+    "question": "After creating the Nova Compute service endpoints, which nova-manage commands register the cell for the deployment?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0006", "nova_install_controller-install-rdo_0013"]
+  },
+  {
+    "id": "q075",
+    "question": "In the Neutron networking concepts, what is a virtual network identifier used for and how do security groups apply firewall rules to instances?",
+    "type": "two_hop",
+    "relevant_chunk_ids": ["neutron_install_concepts_0001", "neutron_install_concepts_0002"]
+  },
+  {
+    "id": "q076",
+    "question": "Walk through the full Nova controller-node setup: creating the databases, creating the Compute API endpoints, and registering the cell.",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["nova_install_controller-install-rdo_0002", "nova_install_controller-install-rdo_0006", "nova_install_controller-install-rdo_0013"]
+  },
+  {
+    "id": "q077",
+    "question": "Explain Swift erasure coding end to end: the concept, where the algorithms come from, and how data and parity fragments are configured.",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["swift_overview_erasure_code_0001", "swift_overview_erasure_code_0003", "swift_overview_erasure_code_0014"]
+  },
+  {
+    "id": "q078",
+    "question": "How is a Swift write request authenticated, placed according to a storage policy, and handled by the cluster architecture?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["swift_overview_auth_0003", "swift_overview_policies_0001", "swift_overview_architecture_0001"]
+  },
+  {
+    "id": "q079",
+    "question": "Describe the Keystone Fernet token lifecycle: what Keystone does, how the keys are created, and how they are rotated.",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["keystone_overview_0001", "keystone_configuration_config-options_0049", "keystone_configuration_config-options_0019"]
+  },
+  {
+    "id": "q080",
+    "question": "In the Swift object storage API, how do accounts and containers form the resource hierarchy, and how does a bulk-delete operation act on it?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["swift_api_object_api_v1_overview_0001", "swift_api_object_api_v1_overview_0002", "swift_api_object_api_v1_overview_0003"]
+  },
+  {
+    "id": "q081",
+    "question": "How does Neutron ML2 work as a framework, which tunnel types does it support, and how is a QoS minimum-bandwidth policy applied on top of it?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["neutron_admin_config-ml2_0001", "neutron_admin_config-ml2_0002", "neutron_admin_config-qos-min-bw_0001"]
+  },
+  {
+    "id": "q082",
+    "question": "What constraints apply when uploading and listing Swift objects, considering the maximum object size, the object name length limit, and pagination?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["swift_api_large_objects_0001", "swift_api_object_api_v1_overview_0005", "swift_api_pagination_0001"]
+  },
+  {
+    "id": "q083",
+    "question": "How does Nova organize compute hosts into cells, schedule instances onto them, and enforce quotas through unified limits?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["nova_admin_cells_0001", "nova_admin_scheduling_0001", "nova_user_unified-limits_0001"]
+  },
+  {
+    "id": "q084",
+    "question": "How can a large Swift deployment be scaled by sharding containers, applying storage policies, and laying out zones?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["swift_overview_container_sharding_0001", "swift_overview_policies_0001", "swift_deployment_guide_0003"]
+  },
+  {
+    "id": "q085",
+    "question": "What is Heat, what API formats does its architecture expose, and how are its services created during installation?",
+    "type": "multi_hop",
+    "relevant_chunk_ids": ["heat_overview_0001", "heat_developing_guides_architecture_0001", "heat_install_install-rdo_0005"]
+  },
+  {
+    "id": "q086",
+    "question": "How do Keystone roles end up controlling access to Swift containers?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["keystone_overview_0001", "swift_overview_auth_0003"]
+  },
+  {
+    "id": "q087",
+    "question": "How does Nova use Glance when launching a compute instance?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["nova_overview_0001", "glance_install_get-started_0001"]
+  },
+  {
+    "id": "q088",
+    "question": "How does Nova rely on Neutron to give compute instances network connectivity?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["nova_overview_0001", "neutron_overview_0001"]
+  },
+  {
+    "id": "q089",
+    "question": "How does Nova depend on the placement service when creating a virtual machine?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["nova_overview_0001", "placement_contributor_architecture_0001"]
+  },
+  {
+    "id": "q090",
+    "question": "How does Nova rely on Keystone for identity and authentication?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["nova_overview_0001", "keystone_overview_0001"]
+  },
+  {
+    "id": "q091",
+    "question": "How can the Image service store its virtual machine images in the Object Storage service?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["glance_install_get-started_0001", "swift_overview_0001"]
+  },
+  {
+    "id": "q092",
+    "question": "In which release was JSON-formatted policy deprecated for Keystone compared with Neutron?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["keystone_configuration_policy_0001", "neutron_configuration_policy_0001"]
+  },
+  {
+    "id": "q093",
+    "question": "In which release was JSON-formatted policy deprecated for Keystone compared with Barbican?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["keystone_configuration_policy_0001", "barbican_configuration_policy_0001"]
+  },
+  {
+    "id": "q094",
+    "question": "How do Cinder service tokens depend on Keystone for identity and authentication?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["cinder_configuration_block-storage_service-token_0001", "keystone_overview_0001"]
+  },
+  {
+    "id": "q095",
+    "question": "How does Heat use Keystone roles such as heat_stack_owner when orchestrating resources?",
+    "type": "cross_document",
+    "relevant_chunk_ids": ["heat_install_install-rdo_0011", "keystone_overview_0001"]
+  },
+  {
+    "id": "q096",
+    "question": "How do I configure OpenStack to automatically provision and manage Kubernetes container clusters as a service?",
+    "type": "unanswerable",
+    "relevant_chunk_ids": []
+  },
+  {
+    "id": "q097",
+    "question": "How do I set up Ceilometer to collect and meter telemetry data across my OpenStack cloud?",
+    "type": "unanswerable",
+    "relevant_chunk_ids": []
+  },
+  {
+    "id": "q098",
+    "question": "How do I use the Sahara data processing service to launch Hadoop and Spark clusters on OpenStack?",
+    "type": "unanswerable",
+    "relevant_chunk_ids": []
+  },
+  {
+    "id": "q099",
+    "question": "How do I use the Senlin clustering service to create and autoscale clusters of nodes in OpenStack?",
+    "type": "unanswerable",
+    "relevant_chunk_ids": []
+  },
+  {
+    "id": "q100",
+    "question": "How do I enable Masakari to provide automated instance high availability and evacuation for failed compute hosts?",
+    "type": "unanswerable",
+    "relevant_chunk_ids": []
+  }
+]

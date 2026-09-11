@@ -1,0 +1,4133 @@
+{
+  "configuration": {
+    "retrieval": "bm25",
+    "library": "rank_bm25 (BM25Okapi)",
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenization": "lowercase; alphanumeric runs joined by ._- ; compound identifiers also split into sub-parts",
+    "top_k_evaluated": 10
+  },
+  "overall": {
+    "total_questions": 100,
+    "answerable_questions": 95,
+    "unanswerable_questions": 5,
+    "any_gold_recall_at_5": 0.6842105263157895,
+    "any_gold_recall_at_10": 0.7684210526315789,
+    "all_gold_at_5": 0.5157894736842106,
+    "all_gold_at_10": 0.5789473684210527,
+    "average_gold_coverage_at_5": 0.5929824561403509,
+    "average_gold_coverage_at_10": 0.6736842105263158,
+    "mrr_at_10": 0.5169715956558062,
+    "avg_latency_ms": 16.612376999109983,
+    "p50_latency_ms": 17.32590002939105,
+    "p95_latency_ms": 28.864049958065152
+  },
+  "grouped": {
+    "by_type": {
+      "single_hop": {
+        "N": 20,
+        "any_at_5": 75.0,
+        "any_at_10": 85.0,
+        "all_at_5": 75.0,
+        "all_at_10": 85.0,
+        "cov_at_5": 75.0,
+        "cov_at_10": 85.0,
+        "mrr_at_10": 0.5691666666666666
+      },
+      "exact_terminology": {
+        "N": 10,
+        "any_at_5": 50.0,
+        "any_at_10": 60.0,
+        "all_at_5": 50.0,
+        "all_at_10": 60.0,
+        "cov_at_5": 50.0,
+        "cov_at_10": 60.0,
+        "mrr_at_10": 0.3625
+      },
+      "technical_detail": {
+        "N": 10,
+        "any_at_5": 60.0,
+        "any_at_10": 60.0,
+        "all_at_5": 60.0,
+        "all_at_10": 60.0,
+        "cov_at_5": 60.0,
+        "cov_at_10": 60.0,
+        "mrr_at_10": 0.3833333333333333
+      },
+      "comparison": {
+        "N": 10,
+        "any_at_5": 70.0,
+        "any_at_10": 80.0,
+        "all_at_5": 70.0,
+        "all_at_10": 80.0,
+        "cov_at_5": 70.0,
+        "cov_at_10": 80.0,
+        "mrr_at_10": 0.5476190476190477
+      },
+      "reasoning": {
+        "N": 10,
+        "any_at_5": 90.0,
+        "any_at_10": 100.0,
+        "all_at_5": 90.0,
+        "all_at_10": 100.0,
+        "cov_at_5": 90.0,
+        "cov_at_10": 100.0,
+        "mrr_at_10": 0.7644444444444444
+      },
+      "two_hop": {
+        "N": 15,
+        "any_at_5": 66.66666666666666,
+        "any_at_10": 80.0,
+        "all_at_5": 26.666666666666668,
+        "all_at_10": 33.33333333333333,
+        "cov_at_5": 46.666666666666664,
+        "cov_at_10": 56.666666666666664,
+        "mrr_at_10": 0.49666666666666665
+      },
+      "multi_hop": {
+        "N": 10,
+        "any_at_5": 70.0,
+        "any_at_10": 70.0,
+        "all_at_5": 10.0,
+        "all_at_10": 10.0,
+        "cov_at_5": 33.333333333333336,
+        "cov_at_10": 40.0,
+        "mrr_at_10": 0.5033333333333333
+      },
+      "cross_document": {
+        "N": 10,
+        "any_at_5": 60.0,
+        "any_at_10": 70.0,
+        "all_at_5": 20.0,
+        "all_at_10": 20.0,
+        "cov_at_5": 40.0,
+        "cov_at_10": 45.0,
+        "mrr_at_10": 0.4666666666666667
+      }
+    },
+    "by_hop": {
+      "1-hop": {
+        "N": 60,
+        "any_at_5": 70.0,
+        "any_at_10": 78.33333333333333,
+        "all_at_5": 70.0,
+        "all_at_10": 78.33333333333333,
+        "cov_at_5": 70.0,
+        "cov_at_10": 78.33333333333333,
+        "mrr_at_10": 0.5327050264550265
+      },
+      "2-hop": {
+        "N": 25,
+        "any_at_5": 64.0,
+        "any_at_10": 76.0,
+        "all_at_5": 24.0,
+        "all_at_10": 28.000000000000004,
+        "cov_at_5": 44.0,
+        "cov_at_10": 52.0,
+        "mrr_at_10": 0.48466666666666663
+      },
+      "3+-hop": {
+        "N": 10,
+        "any_at_5": 70.0,
+        "any_at_10": 70.0,
+        "all_at_5": 10.0,
+        "all_at_10": 10.0,
+        "cov_at_5": 33.333333333333336,
+        "cov_at_10": 40.0,
+        "mrr_at_10": 0.5033333333333333
+      }
+    },
+    "by_service": {
+      "neutron": {
+        "N": 14,
+        "any_at_5": 78.57142857142857,
+        "any_at_10": 78.57142857142857,
+        "all_at_5": 71.42857142857143,
+        "all_at_10": 71.42857142857143,
+        "cov_at_5": 73.80952380952381,
+        "cov_at_10": 73.80952380952381,
+        "mrr_at_10": 0.6011904761904762
+      },
+      "swift": {
+        "N": 30,
+        "any_at_5": 63.33333333333333,
+        "any_at_10": 73.33333333333333,
+        "all_at_5": 40.0,
+        "all_at_10": 50.0,
+        "cov_at_5": 51.11111111111112,
+        "cov_at_10": 62.22222222222222,
+        "mrr_at_10": 0.39420634920634917
+      },
+      "nova": {
+        "N": 17,
+        "any_at_5": 52.94117647058824,
+        "any_at_10": 64.70588235294117,
+        "all_at_5": 52.94117647058824,
+        "all_at_10": 58.82352941176471,
+        "cov_at_5": 52.94117647058824,
+        "cov_at_10": 61.76470588235294,
+        "mrr_at_10": 0.4290849673202614
+      },
+      "keystone": {
+        "N": 11,
+        "any_at_5": 81.81818181818183,
+        "any_at_10": 90.9090909090909,
+        "all_at_5": 54.54545454545454,
+        "all_at_10": 63.63636363636363,
+        "cov_at_5": 66.66666666666666,
+        "cov_at_10": 78.78787878787878,
+        "mrr_at_10": 0.7159090909090909
+      },
+      "glance": {
+        "N": 2,
+        "any_at_5": 100.0,
+        "any_at_10": 100.0,
+        "all_at_5": 100.0,
+        "all_at_10": 100.0,
+        "cov_at_5": 100.0,
+        "cov_at_10": 100.0,
+        "mrr_at_10": 0.6
+      },
+      "barbican": {
+        "N": 1,
+        "any_at_5": 0.0,
+        "any_at_10": 100.0,
+        "all_at_5": 0.0,
+        "all_at_10": 100.0,
+        "cov_at_5": 0.0,
+        "cov_at_10": 100.0,
+        "mrr_at_10": 0.16666666666666666
+      },
+      "heat": {
+        "N": 5,
+        "any_at_5": 80.0,
+        "any_at_10": 80.0,
+        "all_at_5": 60.0,
+        "all_at_10": 60.0,
+        "cov_at_5": 66.66666666666667,
+        "cov_at_10": 66.66666666666667,
+        "mrr_at_10": 0.5333333333333333
+      },
+      "placement": {
+        "N": 3,
+        "any_at_5": 100.0,
+        "any_at_10": 100.0,
+        "all_at_5": 100.0,
+        "all_at_10": 100.0,
+        "cov_at_5": 100.0,
+        "cov_at_10": 100.0,
+        "mrr_at_10": 1.0
+      },
+      "cinder": {
+        "N": 2,
+        "any_at_5": 100.0,
+        "any_at_10": 100.0,
+        "all_at_5": 100.0,
+        "all_at_10": 100.0,
+        "cov_at_5": 100.0,
+        "cov_at_10": 100.0,
+        "mrr_at_10": 1.0
+      },
+      "cross-service": {
+        "N": 10,
+        "any_at_5": 60.0,
+        "any_at_10": 70.0,
+        "all_at_5": 20.0,
+        "all_at_10": 20.0,
+        "cov_at_5": 40.0,
+        "cov_at_10": 45.0,
+        "mrr_at_10": 0.4666666666666667
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "q001",
+      "question": "What service does OpenStack Networking (neutron) provide?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_install_common_get-started-networking_0001",
+        "neutron_admin_config-ipv6_0012",
+        "neutron_overview_0001",
+        "neutron_admin_config-ipv6_0011",
+        "neutron_admin_config-qos-min-bw_0001",
+        "neutron_admin_intro-os-networking_0001",
+        "nova_admin_0006",
+        "neutron_admin_config-qos-min-bw_0017",
+        "neutron_admin_config-qos-min-pps_0010",
+        "neutron_admin_intro-os-networking_0003"
+      ],
+      "found_gold_chunks": [
+        "neutron_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 3,
+      "all_gold_rank": 3,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 10.010100086219609
+    },
+    {
+      "id": "q002",
+      "question": "What is OpenStack Object Storage (swift)?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_0001",
+        "swift_overview_policies_0011",
+        "swift_overview_policies_0006",
+        "swift_admin_guide_0001",
+        "swift_overview_architecture_0003",
+        "swift_overview_policies_0003",
+        "swift_overview_erasure_code_0002",
+        "swift_overview_policies_0013",
+        "swift_overview_policies_0019",
+        "swift_overview_0002"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 6.410599919036031
+    },
+    {
+      "id": "q003",
+      "question": "What does Nova provide, and which other OpenStack services does it require for basic function?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_overview_0001",
+        "barbican_contributor_microversions_0006",
+        "swift_middleware_0069",
+        "nova_install_overview_0001",
+        "nova_admin_0002",
+        "nova_overview_0004",
+        "nova_overview_0003",
+        "neutron_overview_0001",
+        "neutron_install_overview_0001",
+        "nova_overview_0002"
+      ],
+      "found_gold_chunks": [
+        "nova_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 25.7768000010401
+    },
+    {
+      "id": "q004",
+      "question": "What does the Keystone identity service provide to API clients?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0001",
+        "keystone_user_json_home_0001",
+        "keystone_contributor_service-catalog_0004",
+        "keystone_contributor_service-catalog_0003",
+        "keystone_contributor_service-catalog_0002",
+        "keystone_configuration_config-options_0023",
+        "placement_configuration_config_0005",
+        "barbican_configuration_config_0010",
+        "keystone_getting-started_architecture_0005",
+        "keystone_getting-started_architecture_0004"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 7.2752999840304255
+    },
+    {
+      "id": "q005",
+      "question": "What does the Image service (glance) enable users to do?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "glance",
+      "gold_chunk_ids": [
+        "glance_install_get-started_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "glance_overview_0001",
+        "glance_contributor_overview_0002",
+        "glance_contributor_overview_0003",
+        "nova_user_block-device-mapping_0007",
+        "glance_install_get-started_0001",
+        "glance_install_install-rdo_0013",
+        "swift_overview_auth_0006",
+        "keystone_admin_identity-concepts_0004",
+        "glance_install_install-ubuntu_0012",
+        "cinder_configuration_block-storage_service-token_0005"
+      ],
+      "found_gold_chunks": [
+        "glance_install_get-started_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 5,
+      "all_gold_rank": 5,
+      "mrr_at_10": 0.2,
+      "latency_ms": 13.051800080575049
+    },
+    {
+      "id": "q006",
+      "question": "What does the Key Manager service (barbican) provide?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "barbican",
+      "gold_chunk_ids": [
+        "barbican_install_get_started_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "barbican_overview_0001",
+        "barbican_install_install-rdo_0003",
+        "barbican_install_install-ubuntu_0003",
+        "barbican_install_install-rdo_0002",
+        "barbican_install_install-ubuntu_0002",
+        "barbican_install_get_started_0001",
+        "barbican_install_install-ubuntu_0005",
+        "barbican_install_install-rdo_0005",
+        "barbican_install_install-ubuntu_0001",
+        "barbican_install_install-rdo_0001"
+      ],
+      "found_gold_chunks": [
+        "barbican_install_get_started_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 6,
+      "all_gold_rank": 6,
+      "mrr_at_10": 0.16666666666666666,
+      "latency_ms": 14.287599944509566
+    },
+    {
+      "id": "q007",
+      "question": "What is Heat and what does it orchestrate?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "heat",
+      "gold_chunk_ids": [
+        "heat_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "heat_developing_guides_architecture_0001",
+        "heat_developing_guides_architecture_0002",
+        "heat_overview_0001",
+        "keystone_admin_upgrading_0004",
+        "placement_contributor_architecture_0001",
+        "glance_contributor_overview_0003",
+        "swift_overview_erasure_code_0024",
+        "nova_overview_0003",
+        "nova_user_support-matrix_0001",
+        "swift_overview_erasure_code_0023"
+      ],
+      "found_gold_chunks": [
+        "heat_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 3,
+      "all_gold_rank": 3,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 5.2274001063779
+    },
+    {
+      "id": "q008",
+      "question": "What kind of application is the placement service and what does it use for persistence?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "placement",
+      "gold_chunk_ids": [
+        "placement_contributor_architecture_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "placement_contributor_architecture_0001",
+        "placement_install_0001",
+        "placement_contributor_architecture_0007",
+        "swift_overview_policies_0003",
+        "barbican_contributor_database_migrations_0001",
+        "neutron_admin_config-qos-min-bw_0012",
+        "nova_admin_0002",
+        "placement_contributor_architecture_0008",
+        "swift_overview_erasure_code_0002",
+        "nova_overview_0002"
+      ],
+      "found_gold_chunks": [
+        "placement_contributor_architecture_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 20.337700028903782
+    },
+    {
+      "id": "q009",
+      "question": "In which OpenStack release was Cells v2 first added to Nova, and in which release was Cells v1 removed?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_admin_cells_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_cells_0001",
+        "nova_admin_cells_0025",
+        "nova_admin_cells_0014",
+        "nova_admin_cells_0013",
+        "nova_admin_cells_0024",
+        "nova_admin_cells_0012",
+        "nova_admin_cells_0015",
+        "nova_admin_cells_0016",
+        "nova_admin_scheduling_0025",
+        "nova_admin_cells_0023"
+      ],
+      "found_gold_chunks": [
+        "nova_admin_cells_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 14.515399932861328
+    },
+    {
+      "id": "q010",
+      "question": "What is the default maximum size of a single uploaded object in Swift before large object support is needed?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_large_objects_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_middleware_0035",
+        "swift_api_large_objects_0007",
+        "swift_api_form_post_middleware_0002",
+        "swift_api_object_api_v1_overview_0003",
+        "swift_api_large_objects_0008",
+        "swift_middleware_0009",
+        "swift_deployment_guide_0012",
+        "swift_middleware_0026",
+        "swift_api_object_api_v1_overview_0002",
+        "swift_overview_container_sharding_0001"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_api_large_objects_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 25.57100006379187
+    },
+    {
+      "id": "q011",
+      "question": "What is the Modular Layer 2 (ML2) plugin in Neutron?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_contributor_overview_0003",
+        "neutron_contributor_overview_0002",
+        "neutron_admin_config-macvtap_0003",
+        "neutron_admin_config-macvtap_0002",
+        "neutron_admin_intro-os-networking_0001",
+        "neutron_admin_config-ml2_0004",
+        "neutron_admin_config-bgp-dynamic-routing_0002",
+        "neutron_admin_config-active-active-l3gw_0001",
+        "neutron_admin_config-qos_0006"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-ml2_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 8.387899957597256
+    },
+    {
+      "id": "q012",
+      "question": "What does the Role-Based Access Control (RBAC) policy framework in Neutron enable operators and users to do?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-rbac_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-rbac_0001",
+        "neutron_overview_0003",
+        "neutron_overview_0002",
+        "neutron_admin_config_0004",
+        "nova_admin_architecture_0002",
+        "neutron_admin_0001",
+        "neutron_overview_0001",
+        "neutron_admin_0002",
+        "nova_overview_0004",
+        "neutron_admin_config-rbac_0013"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-rbac_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 29.065100010484457
+    },
+    {
+      "id": "q013",
+      "question": "Which Swift component ties the rest of the Swift architecture together and handles incoming API requests?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_architecture_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_architecture_0001",
+        "heat_developing_guides_architecture_0001",
+        "barbican_contributor_architecture_0001",
+        "swift_middleware_0017",
+        "swift_admin_guide_0030",
+        "swift_middleware_0018",
+        "swift_middleware_0080",
+        "heat_developing_guides_architecture_0002",
+        "swift_middleware_0020",
+        "swift_overview_architecture_0001"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_architecture_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 10,
+      "all_gold_rank": 10,
+      "mrr_at_10": 0.1,
+      "latency_ms": 9.782099979929626
+    },
+    {
+      "id": "q014",
+      "question": "What is the default number of Fernet keys kept in rotation by keystone-manage fernet_rotate?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0040",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0048",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0049",
+        "keystone_configuration_config-options_0013"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 28.119699913077056
+    },
+    {
+      "id": "q015",
+      "question": "How many zones is it recommended to deploy a Swift cluster across for optimal results?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_deployment_guide_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_deployment_guide_0002",
+        "swift_deployment_guide_0003",
+        "swift_overview_architecture_0001",
+        "swift_overview_architecture_0002",
+        "swift_overview_container_sharding_0002",
+        "swift_deployment_guide_0004",
+        "swift_overview_erasure_code_0007",
+        "swift_overview_container_sharding_0001",
+        "swift_overview_erasure_code_0010",
+        "swift_admin_guide_0007"
+      ],
+      "found_gold_chunks": [
+        "swift_deployment_guide_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 2,
+      "all_gold_rank": 2,
+      "mrr_at_10": 0.5,
+      "latency_ms": 17.407899955287576
+    },
+    {
+      "id": "q016",
+      "question": "What are the two networking deployment options presented in the Neutron install overview?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_install_overview_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_overview_0001",
+        "nova_overview_0002",
+        "neutron_install_common_get-started-networking_0001",
+        "nova_admin_0002",
+        "neutron_admin_config-macvtap_0003",
+        "nova_install_0001",
+        "neutron_admin_intro-os-networking_0001",
+        "neutron_admin_config-qos-min-bw_0001",
+        "nova_install_compute-install-ubuntu_0001",
+        "keystone_contributor_service-catalog_0001"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "neutron_install_overview_0003"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 15.828800038434565
+    },
+    {
+      "id": "q017",
+      "question": "How are storage policies implemented in Swift?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_policies_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_policies_0002",
+        "swift_overview_erasure_code_0002",
+        "swift_overview_policies_0006",
+        "swift_overview_policies_0001",
+        "swift_admin_guide_0001",
+        "swift_overview_policies_0013",
+        "swift_overview_architecture_0003",
+        "swift_overview_policies_0007",
+        "swift_overview_policies_0019",
+        "swift_overview_policies_0011"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_policies_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 4,
+      "all_gold_rank": 4,
+      "mrr_at_10": 0.25,
+      "latency_ms": 5.475800018757582
+    },
+    {
+      "id": "q018",
+      "question": "Since which Nova release are Keystone unified limits the recommended way to enforce quotas?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_user_unified-limits_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_user_unified-limits_0001",
+        "nova_admin_cells_0015",
+        "nova_admin_0006",
+        "glance_install_install-debian_0012",
+        "glance_install_install-ubuntu_0012",
+        "glance_install_install-rdo_0012",
+        "glance_install_install-rdo_0013",
+        "glance_install_install-ubuntu_0013",
+        "keystone_configuration_config-options_0051",
+        "glance_install_install-debian_0013"
+      ],
+      "found_gold_chunks": [
+        "nova_user_unified-limits_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 24.100699927657843
+    },
+    {
+      "id": "q019",
+      "question": "What is the maximum number of objects that can be removed in a single Swift bulk-delete request?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_object_api_v1_overview_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_api_object_api_v1_overview_0002",
+        "swift_api_object_api_v1_overview_0003",
+        "swift_middleware_0023",
+        "swift_logs_0005",
+        "swift_logs_0006",
+        "swift_middleware_0024",
+        "swift_middleware_0020",
+        "swift_middleware_0051",
+        "neutron_admin_config-rbac_0003",
+        "swift_api_large_objects_0004"
+      ],
+      "found_gold_chunks": [
+        "swift_api_object_api_v1_overview_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 2,
+      "all_gold_rank": 2,
+      "mrr_at_10": 0.5,
+      "latency_ms": 10.068900068290532
+    },
+    {
+      "id": "q020",
+      "question": "Why must Nova send a service token to Cinder, and what change introduced this requirement?",
+      "type": "single_hop",
+      "hop": "1-hop",
+      "service": "cinder",
+      "gold_chunk_ids": [
+        "cinder_configuration_block-storage_service-token_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "cinder_configuration_block-storage_service-token_0001",
+        "cinder_configuration_block-storage_service-token_0002",
+        "cinder_configuration_block-storage_service-token_0003",
+        "nova_admin_cells_0024",
+        "nova_admin_cells_0025",
+        "cinder_configuration_block-storage_service-token_0004",
+        "cinder_configuration_block-storage_service-token_0005",
+        "keystone_admin_configuration_0024",
+        "nova_user_block-device-mapping_0003",
+        "nova_overview_0004"
+      ],
+      "found_gold_chunks": [
+        "cinder_configuration_block-storage_service-token_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 23.291499936021864
+    },
+    {
+      "id": "q021",
+      "question": "What is the exact term Swift uses for the marker that indicates an object has been deleted?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_architecture_0004"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_development_ondisk_backends_0002",
+        "swift_development_ondisk_backends_0009",
+        "swift_development_ondisk_backends_0010",
+        "swift_development_ondisk_backends_0007",
+        "swift_development_ondisk_backends_0006",
+        "swift_middleware_0047",
+        "swift_development_ondisk_backends_0027",
+        "swift_overview_container_sharding_0013",
+        "swift_overview_architecture_0003",
+        "swift_overview_policies_0003"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_overview_architecture_0004"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 8.155200048349798
+    },
+    {
+      "id": "q022",
+      "question": "What does the abbreviation ML2 stand for in Neutron?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-ml2_0004",
+        "neutron_admin_config-qos_0006",
+        "neutron_admin_config-qos-min-bw_0007",
+        "neutron_admin_config-ml2_0003",
+        "neutron_admin_config-qos_0003",
+        "neutron_contributor_overview_0002",
+        "neutron_admin_config-qos_0008",
+        "neutron_admin_config-qos-min-bw_0008",
+        "neutron_admin_config-qos_0004",
+        "neutron_admin_config-qos-min-pps_0006"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "neutron_admin_config-ml2_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 19.441199954599142
+    },
+    {
+      "id": "q023",
+      "question": "What is the maximum length of a Swift object name in bytes?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_object_api_v1_overview_0005"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_api_object_api_v1_overview_0004",
+        "swift_middleware_0008",
+        "swift_middleware_0001",
+        "swift_middleware_0053",
+        "swift_middleware_0045",
+        "swift_middleware_0026",
+        "swift_middleware_0030",
+        "swift_middleware_0009",
+        "swift_middleware_0024",
+        "swift_middleware_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_api_object_api_v1_overview_0005"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 10.611800011247396
+    },
+    {
+      "id": "q024",
+      "question": "What is the default directory that contains Keystone Fernet token keys?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0013",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0048",
+        "keystone_configuration_config-options_0024",
+        "keystone_configuration_config-options_0049"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 11.858400073833764
+    },
+    {
+      "id": "q025",
+      "question": "Which nova-manage cell_v2 command creates cell1 during the controller node installation?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_install_controller-install-rdo_0013",
+        "nova_install_controller-install-ubuntu_0013",
+        "nova_admin_cells_0007",
+        "nova_install_controller-install-rdo_0012",
+        "nova_install_controller-install-ubuntu_0012",
+        "nova_install_compute-install-ubuntu_0007",
+        "nova_admin_cells_0006",
+        "nova_install_compute-install-rdo_0007",
+        "nova_admin_cells_0008",
+        "nova_admin_cells_0009"
+      ],
+      "found_gold_chunks": [
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 19.487099954858422
+    },
+    {
+      "id": "q026",
+      "question": "Which library does Swift use to provide erasure code support?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0003",
+        "swift_overview_erasure_code_0002",
+        "swift_overview_0001",
+        "swift_overview_erasure_code_0001",
+        "swift_overview_architecture_0001",
+        "swift_overview_policies_0002",
+        "swift_overview_policies_0010",
+        "swift_overview_architecture_0004",
+        "swift_overview_policies_0014",
+        "swift_admin_guide_0017"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_erasure_code_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 4,
+      "all_gold_rank": 4,
+      "mrr_at_10": 0.25,
+      "latency_ms": 3.820099984295666
+    },
+    {
+      "id": "q027",
+      "question": "What is the name of the tool used to migrate a JSON-formatted Neutron policy file to YAML?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_configuration_policy_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_configuration_policy_0001",
+        "keystone_configuration_policy_0001",
+        "barbican_configuration_policy_0001",
+        "placement_contributor_architecture_0002",
+        "neutron_admin_config-qos-min-pps_0008",
+        "neutron_admin_config-qos_0008",
+        "swift_admin_guide_0021",
+        "neutron_admin_config-qos-min-bw_0014",
+        "placement_configuration_config_0009",
+        "barbican_configuration_config_0021"
+      ],
+      "found_gold_chunks": [
+        "neutron_configuration_policy_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 30.125899938866496
+    },
+    {
+      "id": "q028",
+      "question": "Which query parameters does the Swift object storage API use to paginate listings?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_pagination_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_middleware_0047",
+        "swift_middleware_0060",
+        "swift_middleware_0061",
+        "swift_overview_policies_0019",
+        "swift_overview_architecture_0003",
+        "swift_api_object_api_v1_overview_0004",
+        "swift_api_temporary_url_middleware_0001",
+        "swift_middleware_0035",
+        "swift_middleware_0058",
+        "swift_middleware_0044"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_api_pagination_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 6.070000003091991
+    },
+    {
+      "id": "q029",
+      "question": "Which keystone-manage command is used to create the initial Fernet key repository?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0048",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0040",
+        "keystone_admin_upgrading_0005",
+        "keystone_configuration_config-options_0049",
+        "keystone_admin_configuration_0005",
+        "keystone_admin_upgrading_0004"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 8,
+      "all_gold_rank": 8,
+      "mrr_at_10": 0.125,
+      "latency_ms": 24.604499922133982
+    },
+    {
+      "id": "q030",
+      "question": "What is the name of the middleware that maps Keystone roles to Swift ACLs?",
+      "type": "exact_terminology",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_auth_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_auth_0002",
+        "swift_middleware_0041",
+        "swift_middleware_0040",
+        "swift_overview_auth_0003",
+        "swift_overview_auth_0007",
+        "swift_overview_auth_0004",
+        "cinder_configuration_block-storage_service-token_0005",
+        "swift_middleware_0042",
+        "swift_middleware_0039",
+        "swift_middleware_0005"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_auth_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 4,
+      "all_gold_rank": 4,
+      "mrr_at_10": 0.25,
+      "latency_ms": 5.412400001659989
+    },
+    {
+      "id": "q031",
+      "question": "Which tunnel type_drivers does the Neutron ML2 support matrix list, and which of those does OVN not support?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0002"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-ml2_0002",
+        "neutron_admin_config-qos-min-bw_0007",
+        "neutron_admin_config-qos_0003",
+        "neutron_admin_config-ml2_0001",
+        "neutron_overview_0002",
+        "neutron_admin_config-ml2_0005",
+        "neutron_overview_0005",
+        "neutron_admin_config-qos_0004",
+        "neutron_admin_config-ml2_0004",
+        "neutron_contributor_overview_0002"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-ml2_0002"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 25.53420001640916
+    },
+    {
+      "id": "q032",
+      "question": "What do the ec_num_data_fragments and ec_num_parity_fragments settings control in a Swift erasure code policy?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0009",
+        "swift_overview_erasure_code_0006",
+        "swift_overview_erasure_code_0007",
+        "swift_overview_erasure_code_0010",
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0013",
+        "swift_overview_erasure_code_0008",
+        "swift_overview_erasure_code_0011",
+        "swift_overview_erasure_code_0012",
+        "swift_overview_erasure_code_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 8.926700102165341
+    },
+    {
+      "id": "q033",
+      "question": "Which databases must be created on the controller node when installing Nova?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0002"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_install_controller-install-rdo_0009",
+        "nova_install_controller-install-ubuntu_0009",
+        "nova_admin_cells_0005",
+        "nova_install_controller-install-ubuntu_0001",
+        "nova_install_controller-install-rdo_0001",
+        "nova_admin_upgrades_0002",
+        "nova_admin_cells_0007",
+        "neutron_admin_ovn_refarch_refarch_0003",
+        "nova_admin_cells_0006",
+        "nova_install_controller-install-ubuntu_0008"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0002"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 9.917299961671233
+    },
+    {
+      "id": "q034",
+      "question": "What URL and service type are used when creating the Nova Compute API service endpoints?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0006"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_install_controller-install-rdo_0007",
+        "nova_install_controller-install-ubuntu_0007",
+        "nova_overview_0001",
+        "nova_overview_0002",
+        "nova_admin_0004",
+        "nova_overview_0003",
+        "nova_admin_cells_0002",
+        "keystone_contributor_service-catalog_0002",
+        "nova_install_controller-install-rdo_0005",
+        "nova_install_controller-install-ubuntu_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0006"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 20.047100028023124
+    },
+    {
+      "id": "q035",
+      "question": "What do the staged, primary, and secondary Fernet keys represent when max_active_keys is set to its default value?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0020",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0014",
+        "swift_api_temporary_url_middleware_0002",
+        "keystone_configuration_config-options_0013",
+        "keystone_configuration_config-options_0049",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_configuration_config-options_0048"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 9.526500012725592
+    },
+    {
+      "id": "q036",
+      "question": "On which port does the Swift proxy server listen in the Keystone auth configuration example?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_auth_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_auth_0010",
+        "swift_overview_auth_0009",
+        "swift_overview_auth_0003",
+        "swift_middleware_0058",
+        "swift_overview_auth_0008",
+        "swift_middleware_0002",
+        "swift_admin_guide_0028",
+        "swift_middleware_0004",
+        "swift_middleware_0040",
+        "swift_admin_guide_0012"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_auth_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 3,
+      "all_gold_rank": 3,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 23.517300025559962
+    },
+    {
+      "id": "q037",
+      "question": "How is the placement service scaled, given that its state is managed solely in the database?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "placement",
+      "gold_chunk_ids": [
+        "placement_contributor_architecture_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "placement_contributor_architecture_0001",
+        "neutron_admin_config-ml2_0001",
+        "placement_install_from-pypi_0001",
+        "placement_install_0002",
+        "placement_user_0001",
+        "neutron_admin_config-qos-min-bw_0010",
+        "nova_admin_cells_0004",
+        "swift_overview_container_sharding_0016",
+        "placement_configuration_config_0001",
+        "swift_overview_erasure_code_0015"
+      ],
+      "found_gold_chunks": [
+        "placement_contributor_architecture_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 6.181500037200749
+    },
+    {
+      "id": "q038",
+      "question": "Which scheduler filters are given as examples for the nova-scheduler?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_admin_scheduling_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_scheduling_0003",
+        "nova_admin_scheduling_0027",
+        "placement_user_0001",
+        "nova_admin_scheduling_0001",
+        "nova_admin_scheduling_0028",
+        "nova_admin_cells_0008",
+        "nova_admin_scheduling_0005",
+        "nova_install_controller-install-ubuntu_0014",
+        "nova_admin_scheduling_0011",
+        "nova_admin_cells_0001"
+      ],
+      "found_gold_chunks": [
+        "nova_admin_scheduling_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 4,
+      "all_gold_rank": 4,
+      "mrr_at_10": 0.25,
+      "latency_ms": 19.414099981077015
+    },
+    {
+      "id": "q039",
+      "question": "What minimum OVS and OVN versions are required for Neutron SmartNIC DPU support?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_ovn_smartnic_dpu_0011"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_ovn_smartnic_dpu_0001",
+        "neutron_admin_ovn_smartnic_dpu_0013",
+        "neutron_overview_0004",
+        "neutron_admin_ovn_smartnic_dpu_0011",
+        "neutron_admin_0002",
+        "neutron_overview_0002",
+        "neutron_admin_config_0004",
+        "neutron_overview_0005",
+        "neutron_admin_config-qos_0003",
+        "neutron_overview_0001"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_ovn_smartnic_dpu_0011"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 4,
+      "all_gold_rank": 4,
+      "mrr_at_10": 0.25,
+      "latency_ms": 9.482900029979646
+    },
+    {
+      "id": "q040",
+      "question": "What is the default Swift large object size limit and how does it relate to the need for segmented uploads?",
+      "type": "technical_detail",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_large_objects_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_api_large_objects_0008",
+        "keystone_configuration_config-options_0001",
+        "swift_middleware_0026",
+        "swift_middleware_0016",
+        "swift_middleware_0002",
+        "swift_deployment_guide_0015",
+        "swift_deployment_guide_0014",
+        "swift_deployment_guide_0012",
+        "swift_overview_erasure_code_0007",
+        "swift_api_large_objects_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_api_large_objects_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 15.674200025387108
+    },
+    {
+      "id": "q041",
+      "question": "What is the difference between Fernet and JWS token providers in Keystone?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0048",
+        "keystone_configuration_config-options_0049",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0024",
+        "keystone_admin_0001",
+        "keystone_overview_0003",
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0014",
+        "keystone_admin_configuration_0018",
+        "cinder_configuration_block-storage_service-token_0007"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 2,
+      "all_gold_rank": 2,
+      "mrr_at_10": 0.5,
+      "latency_ms": 19.261999987065792
+    },
+    {
+      "id": "q042",
+      "question": "How do provider networks differ from self-service networks in the Neutron deployment options?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_install_overview_0003"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_intro-os-networking_0003",
+        "neutron_admin_config-macvtap_0002",
+        "neutron_install_overview_0003",
+        "neutron_admin_config-bgp-dynamic-routing_0001",
+        "nova_install_overview_0003",
+        "neutron_admin_ovn_refarch_refarch_0007",
+        "neutron_admin_config-macvtap_0001",
+        "neutron_admin_config-bgp-dynamic-routing_0029",
+        "neutron_admin_intro-os-networking_0004",
+        "neutron_admin_config-bgp-dynamic-routing_0028"
+      ],
+      "found_gold_chunks": [
+        "neutron_install_overview_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 3,
+      "all_gold_rank": 3,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 8.010699995793402
+    },
+    {
+      "id": "q043",
+      "question": "How do the primary, staged, and secondary Fernet keys differ in their roles?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0014",
+        "cinder_configuration_block-storage_service-token_0006",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_configuration_config-options_0013",
+        "keystone_configuration_config-options_0049",
+        "keystone_admin_configuration_0024",
+        "nova_admin_architecture_0002"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 20.362699986435473
+    },
+    {
+      "id": "q044",
+      "question": "How do the roles of the API database, the cell0 database, and the cell1 database differ in a Nova cells deployment?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_admin_cells_0005"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_cells_0005",
+        "nova_admin_cells_0004",
+        "nova_admin_cells_0006",
+        "nova_admin_cells_0003",
+        "nova_admin_cells_0012",
+        "nova_admin_cells_0001",
+        "nova_admin_cells_0002",
+        "nova_install_controller-install-ubuntu_0012",
+        "nova_install_controller-install-rdo_0013",
+        "nova_install_controller-install-ubuntu_0013"
+      ],
+      "found_gold_chunks": [
+        "nova_admin_cells_0005"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 6.494699977338314
+    },
+    {
+      "id": "q045",
+      "question": "What is the difference between Heat's OpenStack-native REST API and its CloudFormation-compatible Query API?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "heat",
+      "gold_chunk_ids": [
+        "heat_developing_guides_architecture_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "heat_developing_guides_architecture_0001",
+        "heat_install_get_started_0001",
+        "heat_developing_guides_architecture_0002",
+        "heat_overview_0001",
+        "barbican_install_get_started_0001",
+        "heat_install_install-rdo_0004",
+        "heat_install_install-debian_0004",
+        "heat_install_install-ubuntu_0004",
+        "nova_admin_cells_0003",
+        "keystone_configuration_config-options_0038"
+      ],
+      "found_gold_chunks": [
+        "heat_developing_guides_architecture_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 17.91689998935908
+    },
+    {
+      "id": "q046",
+      "question": "How does the responsibility of the Swift Container Server differ from that of the Account Server?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_architecture_0004"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_admin_guide_0017",
+        "swift_admin_guide_0021",
+        "swift_overview_policies_0015",
+        "swift_overview_policies_0018",
+        "swift_overview_policies_0014",
+        "swift_middleware_0039",
+        "swift_overview_architecture_0004",
+        "swift_admin_guide_0027",
+        "swift_middleware_0048",
+        "swift_admin_guide_0028"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_architecture_0004"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 7,
+      "all_gold_rank": 7,
+      "mrr_at_10": 0.14285714285714285,
+      "latency_ms": 17.302800086326897
+    },
+    {
+      "id": "q047",
+      "question": "How does OVN's support for tunnel network types compare with SR-IOV's in the Neutron ML2 matrix?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0002"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-qos-min-bw_0007",
+        "neutron_overview_0002",
+        "neutron_admin_config-qos_0002",
+        "neutron_admin_config-qos_0003",
+        "neutron_admin_0002",
+        "neutron_overview_0004",
+        "neutron_admin_config-qos-min-bw_0006",
+        "neutron_contributor_overview_0003",
+        "neutron_overview_0001",
+        "neutron_overview_0003"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "neutron_admin_config-ml2_0002"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 27.884699986316264
+    },
+    {
+      "id": "q048",
+      "question": "What is the difference between the VCPU and PCPU resource classes in Nova unified limits?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_user_unified-limits_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_user_unified-limits_0001",
+        "nova_admin_0006",
+        "nova_admin_cells_0015",
+        "nova_admin_0007",
+        "nova_admin_0005",
+        "keystone_configuration_config-options_0051",
+        "placement_contributor_architecture_0001",
+        "nova_overview_0003",
+        "placement_user_0001",
+        "neutron_admin_config-qos-min-bw_0012"
+      ],
+      "found_gold_chunks": [
+        "nova_user_unified-limits_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 9.7859000088647
+    },
+    {
+      "id": "q049",
+      "question": "What is the difference between the ec_num_data_fragments and ec_num_parity_fragments in a Swift erasure code policy?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0007",
+        "swift_overview_erasure_code_0009",
+        "swift_overview_erasure_code_0006",
+        "swift_overview_erasure_code_0010",
+        "swift_overview_erasure_code_0008",
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0013",
+        "swift_overview_erasure_code_0011",
+        "swift_overview_erasure_code_0012",
+        "swift_overview_erasure_code_0002"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 25.819399976171553
+    },
+    {
+      "id": "q050",
+      "question": "How does Nova's support for virtual machines compare with its support for baremetal servers and system containers?",
+      "type": "comparison",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_0001",
+        "nova_overview_0001",
+        "nova_admin_architecture_0002",
+        "nova_install_compute-install-rdo_0005",
+        "neutron_overview_0004",
+        "swift_overview_architecture_0004",
+        "nova_install_compute-install-ubuntu_0005",
+        "nova_install_compute-install-ubuntu_0001",
+        "nova_install_compute-install-rdo_0001",
+        "nova_admin_0003"
+      ],
+      "found_gold_chunks": [
+        "nova_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 2,
+      "all_gold_rank": 2,
+      "mrr_at_10": 0.5,
+      "latency_ms": 22.469800082035363
+    },
+    {
+      "id": "q051",
+      "question": "Why does Nova depend on Keystone, Glance, Neutron, and Placement to function?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-qos-min-bw_0006",
+        "neutron_admin_config-qos-min-bw_0005",
+        "nova_overview_0001",
+        "neutron_admin_config-qos-min-bw_0012",
+        "glance_contributor_overview_0002",
+        "neutron_admin_config-qos-min-bw_0004",
+        "neutron_admin_config-qos-min-bw_0017",
+        "neutron_admin_config-qos-min-bw_0007",
+        "nova_install_controller-install-ubuntu_0009",
+        "nova_install_controller-install-rdo_0009"
+      ],
+      "found_gold_chunks": [
+        "nova_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 3,
+      "all_gold_rank": 3,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 22.751899901777506
+    },
+    {
+      "id": "q052",
+      "question": "Why is Swift described as an eventually consistent object store?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_overview_0001",
+        "swift_api_object_api_v1_overview_0001",
+        "swift_overview_policies_0003",
+        "swift_overview_policies_0001",
+        "swift_overview_auth_0003",
+        "swift_overview_auth_0009",
+        "swift_overview_policies_0019",
+        "swift_overview_auth_0002",
+        "swift_overview_container_sharding_0019",
+        "swift_middleware_0018"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 18.663999973796308
+    },
+    {
+      "id": "q053",
+      "question": "Why is it necessary for Nova to authenticate to Cinder with a service token when performing user actions?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "cinder",
+      "gold_chunk_ids": [
+        "cinder_configuration_block-storage_service-token_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "cinder_configuration_block-storage_service-token_0001",
+        "nova_user_block-device-mapping_0003",
+        "keystone_getting-started_architecture_0006",
+        "swift_overview_erasure_code_0022",
+        "cinder_configuration_block-storage_service-token_0002",
+        "cinder_configuration_block-storage_service-token_0003",
+        "cinder_contributor_api_microversion_history_0004",
+        "keystone_admin_configuration_0024",
+        "swift_overview_erasure_code_0002",
+        "keystone_admin_identity-concepts_0004"
+      ],
+      "found_gold_chunks": [
+        "cinder_configuration_block-storage_service-token_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 11.460100067779422
+    },
+    {
+      "id": "q054",
+      "question": "Why is it unsafe to run keystone-manage fernet_rotate twice on one node without syncing the other nodes?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0018",
+        "keystone_admin_upgrading_0002",
+        "keystone_configuration_config-options_0040",
+        "keystone_admin_upgrading_0004",
+        "keystone_admin_upgrading_0005",
+        "keystone_admin_upgrading_0003",
+        "keystone_admin_upgrading_0006",
+        "keystone_configuration_config-options_0048"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 28.351299930363894
+    },
+    {
+      "id": "q055",
+      "question": "Why does Swift use tombstones rather than immediately removing deleted items?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_architecture_0004"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "swift_admin_guide_0007",
+        "keystone_user_application_credentials_0007",
+        "swift_middleware_0024",
+        "swift_overview_container_sharding_0022",
+        "swift_overview_architecture_0004",
+        "swift_development_ondisk_backends_0010",
+        "swift_middleware_0012",
+        "swift_admin_guide_0002",
+        "swift_development_ondisk_backends_0007",
+        "swift_api_large_objects_0004"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_architecture_0004"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 5,
+      "all_gold_rank": 5,
+      "mrr_at_10": 0.2,
+      "latency_ms": 7.092099986039102
+    },
+    {
+      "id": "q056",
+      "question": "Why would an operator or user rely on Neutron RBAC policies to grant access to network resources?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-rbac_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "neutron_admin_config-rbac_0001",
+        "neutron_admin_config-rbac_0021",
+        "neutron_admin_config-rbac_0015",
+        "neutron_admin_config_0005",
+        "neutron_admin_config-rbac_0007",
+        "neutron_admin_config-rbac_0013",
+        "neutron_overview_0002",
+        "neutron_admin_config-rbac_0016",
+        "neutron_configuration_policy_0001",
+        "neutron_admin_config-rbac_0004"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-rbac_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 25.494099943898618
+    },
+    {
+      "id": "q057",
+      "question": "Why can the placement service be scaled simply by adding more WSGI application instances?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "placement",
+      "gold_chunk_ids": [
+        "placement_contributor_architecture_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "placement_contributor_architecture_0001",
+        "placement_install_0001",
+        "placement_contributor_architecture_0002",
+        "swift_overview_erasure_code_0002",
+        "swift_middleware_0080",
+        "swift_deployment_guide_0001",
+        "placement_contributor_architecture_0003",
+        "placement_install_from-pypi_0009",
+        "neutron_admin_config_0006",
+        "nova_admin_cells_0027"
+      ],
+      "found_gold_chunks": [
+        "placement_contributor_architecture_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 6.114100106060505
+    },
+    {
+      "id": "q058",
+      "question": "Why does the Image service recommend against the file back end for a multi-node glance deployment?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "glance",
+      "gold_chunk_ids": [
+        "glance_install_get-started_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "glance_install_get-started_0001",
+        "keystone_admin_upgrading_0002",
+        "cinder_install_cinder-storage-install-rdo_0007",
+        "glance_install_verify_0001",
+        "keystone_admin_configuration_0019",
+        "cinder_install_cinder-storage-install-rdo_0005",
+        "glance_admin_0001",
+        "nova_admin_cells_0025",
+        "keystone_admin_configuration_0017",
+        "cinder_install_cinder-storage-install-ubuntu_0004"
+      ],
+      "found_gold_chunks": [
+        "glance_install_get-started_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 26.43759991042316
+    },
+    {
+      "id": "q059",
+      "question": "Why does Heat use a declarative template format to describe cloud applications?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "heat",
+      "gold_chunk_ids": [
+        "heat_overview_0001"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "heat_overview_0001",
+        "heat_developing_guides_architecture_0001",
+        "heat_template_guide_overview_0001",
+        "heat_install_get_started_0001",
+        "heat_install_launch-instance_0001",
+        "heat_overview_0002",
+        "keystone_admin_event_notifications_0001",
+        "nova_admin_architecture_0004",
+        "glance_install_verify_0001",
+        "swift_middleware_0012"
+      ],
+      "found_gold_chunks": [
+        "heat_overview_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 1,
+      "mrr_at_10": 1.0,
+      "latency_ms": 5.792199983261526
+    },
+    {
+      "id": "q060",
+      "question": "Why does the Nova architecture require creating separate api, main, and cell0 databases before the compute service can run?",
+      "type": "reasoning",
+      "hop": "1-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0002"
+      ],
+      "num_gold_chunks": 1,
+      "retrieved_top10": [
+        "nova_admin_cells_0004",
+        "nova_admin_upgrades_0002",
+        "nova_admin_cells_0006",
+        "nova_install_controller-install-ubuntu_0001",
+        "nova_install_controller-install-rdo_0001",
+        "nova_admin_cells_0005",
+        "nova_admin_upgrades_0009",
+        "nova_admin_0001",
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_compute-install-ubuntu_0007"
+      ],
+      "found_gold_chunks": [
+        "nova_install_controller-install-rdo_0002"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 9,
+      "all_gold_rank": 9,
+      "mrr_at_10": 0.1111111111111111,
+      "latency_ms": 25.76360001694411
+    },
+    {
+      "id": "q061",
+      "question": "What are the full steps to set up Nova cells on the controller node, from creating the databases to registering cell1?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_admin_cells_0005",
+        "nova_admin_cells_0004",
+        "nova_admin_cells_0012",
+        "nova_install_compute-install-ubuntu_0007",
+        "nova_install_controller-install-ubuntu_0001",
+        "nova_admin_cells_0006",
+        "nova_install_controller-install-rdo_0001",
+        "nova_admin_cells_0007",
+        "nova_install_compute-install-rdo_0008",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "found_gold_chunks": [
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0002"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 10,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.1,
+      "latency_ms": 9.086099918931723
+    },
+    {
+      "id": "q062",
+      "question": "During the Nova controller installation, how do you create the required databases and then create the Compute API service endpoints?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_controller-install-rdo_0006"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_install_controller-install-ubuntu_0001",
+        "nova_install_controller-install-rdo_0001",
+        "nova_admin_cells_0006",
+        "nova_admin_cells_0019",
+        "cinder_install_0001",
+        "nova_install_verify_0002",
+        "nova_admin_upgrades_0002",
+        "nova_install_controller-install-ubuntu_0007",
+        "nova_admin_cells_0005",
+        "nova_admin_0004"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_controller-install-rdo_0006"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 29.25750007852912
+    },
+    {
+      "id": "q063",
+      "question": "How do you set up and then rotate Keystone Fernet keys, and how many active keys are retained by default?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_configuration_config-options_0049",
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0018",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0040",
+        "keystone_configuration_config-options_0013",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_configuration_config-options_0048",
+        "swift_middleware_0039"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 19.175700028426945
+    },
+    {
+      "id": "q064",
+      "question": "How does the Swift Keystone authentication pipeline work, from the auth_token and keystoneauth middleware to the object-store endpoint?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_auth_0001",
+        "swift_overview_auth_0003"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_auth_0003",
+        "swift_overview_auth_0002",
+        "swift_middleware_0039",
+        "swift_overview_auth_0004",
+        "keystone_admin_configuration_0024",
+        "keystone_admin_configuration_0025",
+        "placement_configuration_config_0006",
+        "swift_middleware_0005",
+        "swift_middleware_0004",
+        "swift_middleware_0058"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_auth_0003"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_auth_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 21.757800015620887
+    },
+    {
+      "id": "q065",
+      "question": "How does Swift erasure coding work, and where do the actual erasure code algorithms come from?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0003"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0003",
+        "swift_overview_erasure_code_0001",
+        "swift_overview_policies_0010",
+        "swift_overview_policies_0011",
+        "swift_overview_erasure_code_0004",
+        "swift_overview_architecture_0004",
+        "swift_overview_erasure_code_0002",
+        "swift_overview_erasure_code_0006",
+        "swift_overview_0001",
+        "swift_overview_policies_0016"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 2,
+      "mrr_at_10": 1.0,
+      "latency_ms": 25.431899935938418
+    },
+    {
+      "id": "q066",
+      "question": "How does a Swift erasure code policy work, and what do its data and parity fragment settings configure?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0014"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0013",
+        "swift_overview_erasure_code_0005",
+        "swift_overview_erasure_code_0003",
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0006",
+        "swift_overview_0001",
+        "swift_overview_erasure_code_0009",
+        "swift_overview_policies_0002",
+        "swift_overview_erasure_code_0015",
+        "swift_overview_erasure_code_0007"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_erasure_code_0001"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 4,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.25,
+      "latency_ms": 8.554999949410558
+    },
+    {
+      "id": "q067",
+      "question": "What is Swift container sharding and which tool is used to manage shard ranges?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_container_sharding_0001",
+        "swift_overview_container_sharding_0003"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_container_sharding_0002",
+        "swift_overview_container_sharding_0013",
+        "swift_overview_container_sharding_0007",
+        "swift_overview_container_sharding_0003",
+        "swift_overview_container_sharding_0006",
+        "swift_overview_container_sharding_0008",
+        "swift_overview_container_sharding_0022",
+        "swift_overview_container_sharding_0005",
+        "swift_overview_container_sharding_0014",
+        "swift_overview_container_sharding_0023"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_container_sharding_0003"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_container_sharding_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 4,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.25,
+      "latency_ms": 25.599600048735738
+    },
+    {
+      "id": "q068",
+      "question": "How are Swift storage policies implemented with object rings, and which ring file backs the default Policy-0?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_policies_0001",
+        "swift_overview_policies_0006"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_policies_0006",
+        "swift_overview_policies_0019",
+        "swift_overview_policies_0001",
+        "swift_overview_policies_0005",
+        "swift_overview_policies_0013",
+        "swift_overview_policies_0015",
+        "swift_overview_architecture_0003",
+        "swift_overview_architecture_0002",
+        "swift_overview_policies_0011",
+        "swift_admin_guide_0001"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_policies_0001",
+        "swift_overview_policies_0006"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 3,
+      "mrr_at_10": 1.0,
+      "latency_ms": 10.113200056366622
+    },
+    {
+      "id": "q069",
+      "question": "In Swift, how does the proxy-based architecture handle requests, and how are deletes propagated through replication?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_architecture_0001",
+        "swift_overview_architecture_0004"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_admin_0001",
+        "swift_overview_erasure_code_0004",
+        "swift_middleware_0018",
+        "swift_overview_policies_0011",
+        "swift_middleware_0048",
+        "swift_overview_architecture_0002",
+        "swift_overview_erasure_code_0015",
+        "swift_overview_policies_0002",
+        "swift_overview_policies_0001",
+        "swift_overview_architecture_0004"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_architecture_0004"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_architecture_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 10,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.1,
+      "latency_ms": 25.921200052835047
+    },
+    {
+      "id": "q070",
+      "question": "In the Swift object storage API, how are an account and a container defined in relation to each other?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_object_api_v1_overview_0001",
+        "swift_api_object_api_v1_overview_0002"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_policies_0002",
+        "swift_api_object_api_v1_overview_0001",
+        "swift_overview_policies_0006",
+        "swift_overview_policies_0019",
+        "swift_middleware_0044",
+        "swift_middleware_0048",
+        "swift_middleware_0086",
+        "swift_overview_policies_0018",
+        "swift_admin_guide_0016",
+        "swift_api_object_api_v1_overview_0002"
+      ],
+      "found_gold_chunks": [
+        "swift_api_object_api_v1_overview_0001",
+        "swift_api_object_api_v1_overview_0002"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 2,
+      "all_gold_rank": 10,
+      "mrr_at_10": 0.5,
+      "latency_ms": 18.758199992589653
+    },
+    {
+      "id": "q071",
+      "question": "What is the Neutron ML2 framework and which network type drivers and mechanism drivers does its support matrix cover?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_admin_config-ml2_0002"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_admin_config-qos-min-bw_0007",
+        "neutron_admin_config-ml2_0002",
+        "neutron_admin_config-macvtap_0002",
+        "neutron_admin_config-qos_0003",
+        "neutron_admin_config-ml2_0004",
+        "neutron_overview_0001",
+        "neutron_overview_0003",
+        "neutron_admin_config_0003",
+        "neutron_admin_config-qos-min-bw_0008"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_admin_config-ml2_0002"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 3,
+      "mrr_at_10": 1.0,
+      "latency_ms": 19.04340006876737
+    },
+    {
+      "id": "q072",
+      "question": "When installing Heat, how do you create the heat and heat-cfn services and then their API endpoints?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "heat",
+      "gold_chunk_ids": [
+        "heat_install_install-rdo_0005",
+        "heat_install_install-rdo_0007"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "heat_install_install-rdo_0004",
+        "heat_install_install-rdo_0002",
+        "heat_install_install-rdo_0003",
+        "heat_install_install-debian_0004",
+        "heat_install_install-ubuntu_0004",
+        "heat_install_install-ubuntu_0003",
+        "heat_install_install-debian_0003",
+        "heat_install_install-debian_0002",
+        "heat_install_install-ubuntu_0002",
+        "heat_install_install-ubuntu_0009"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "heat_install_install-rdo_0005",
+        "heat_install_install-rdo_0007"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 28.859499958343804
+    },
+    {
+      "id": "q073",
+      "question": "What does Keystone provide overall, and how does it create the Fernet tokens it issues?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_overview_0001",
+        "keystone_configuration_config-options_0049"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0001",
+        "keystone_admin_configuration_0018",
+        "keystone_configuration_config-options_0049",
+        "keystone_configuration_config-options_0019",
+        "keystone_configuration_config-options_0048",
+        "keystone_admin_upgrading_0004",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0020"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0049"
+      ],
+      "missing_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 4,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.25,
+      "latency_ms": 13.880499987863004
+    },
+    {
+      "id": "q074",
+      "question": "After creating the Nova Compute service endpoints, which nova-manage commands register the cell for the deployment?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0006",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_admin_cells_0007",
+        "nova_admin_cells_0008",
+        "nova_install_compute-install-ubuntu_0007",
+        "nova_admin_cells_0009",
+        "nova_install_compute-install-rdo_0007",
+        "nova_install_controller-install-rdo_0012",
+        "nova_install_controller-install-ubuntu_0012",
+        "nova_admin_cells_0005",
+        "nova_admin_cells_0006",
+        "nova_admin_scheduling_0025"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0006",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 19.896300043910742
+    },
+    {
+      "id": "q075",
+      "question": "In the Neutron networking concepts, what is a virtual network identifier used for and how do security groups apply firewall rules to instances?",
+      "type": "two_hop",
+      "hop": "2-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_install_concepts_0001",
+        "neutron_install_concepts_0002"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "neutron_install_concepts_0001",
+        "neutron_install_concepts_0002",
+        "neutron_admin_intro-os-networking_0005",
+        "neutron_admin_config-ipv6_0010",
+        "neutron_admin_intro-os-networking_0007",
+        "neutron_overview_0001",
+        "neutron_admin_intro-os-networking_0001",
+        "neutron_admin_config-ipv6_0001",
+        "neutron_admin_config-ml2_0010",
+        "nova_install_overview_0003"
+      ],
+      "found_gold_chunks": [
+        "neutron_install_concepts_0001",
+        "neutron_install_concepts_0002"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 2,
+      "mrr_at_10": 1.0,
+      "latency_ms": 20.811000023968518
+    },
+    {
+      "id": "q076",
+      "question": "Walk through the full Nova controller-node setup: creating the databases, creating the Compute API endpoints, and registering the cell.",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_controller-install-rdo_0006",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "nova_admin_cells_0005",
+        "nova_admin_upgrades_0002",
+        "nova_install_controller-install-ubuntu_0001",
+        "nova_install_controller-install-rdo_0001",
+        "nova_admin_cells_0004",
+        "nova_admin_cells_0006",
+        "nova_overview_0002",
+        "nova_install_compute-install-ubuntu_0007",
+        "nova_admin_cells_0012",
+        "nova_admin_cells_0007"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_install_controller-install-rdo_0002",
+        "nova_install_controller-install-rdo_0006",
+        "nova_install_controller-install-rdo_0013"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 14.560200041159987
+    },
+    {
+      "id": "q077",
+      "question": "Explain Swift erasure coding end to end: the concept, where the algorithms come from, and how data and parity fragments are configured.",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0003",
+        "swift_overview_erasure_code_0014"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0006",
+        "swift_overview_erasure_code_0013",
+        "swift_overview_erasure_code_0009",
+        "swift_overview_erasure_code_0007",
+        "swift_overview_erasure_code_0003",
+        "swift_overview_erasure_code_0008",
+        "swift_overview_erasure_code_0010",
+        "swift_overview_policies_0011",
+        "swift_overview_policies_0002"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_erasure_code_0001",
+        "swift_overview_erasure_code_0003"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_erasure_code_0014"
+      ],
+      "gold_coverage_at_5": 0.3333333333333333,
+      "gold_coverage_at_10": 0.6666666666666666,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 28.19629991427064
+    },
+    {
+      "id": "q078",
+      "question": "How is a Swift write request authenticated, placed according to a storage policy, and handled by the cluster architecture?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_auth_0003",
+        "swift_overview_policies_0001",
+        "swift_overview_architecture_0001"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "swift_overview_policies_0001",
+        "swift_overview_policies_0002",
+        "swift_overview_policies_0012",
+        "swift_middleware_0044",
+        "swift_overview_architecture_0001",
+        "swift_admin_guide_0020",
+        "swift_overview_policies_0003",
+        "swift_overview_policies_0006",
+        "swift_overview_policies_0004",
+        "swift_overview_erasure_code_0006"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_policies_0001",
+        "swift_overview_architecture_0001"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_auth_0003"
+      ],
+      "gold_coverage_at_5": 0.6666666666666666,
+      "gold_coverage_at_10": 0.6666666666666666,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 6.949799950234592
+    },
+    {
+      "id": "q079",
+      "question": "Describe the Keystone Fernet token lifecycle: what Keystone does, how the keys are created, and how they are rotated.",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "keystone",
+      "gold_chunk_ids": [
+        "keystone_overview_0001",
+        "keystone_configuration_config-options_0049",
+        "keystone_configuration_config-options_0019"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "keystone_configuration_config-options_0019",
+        "cinder_configuration_block-storage_service-token_0007",
+        "keystone_admin_configuration_0024",
+        "keystone_configuration_config-options_0013",
+        "keystone_configuration_config-options_0018",
+        "keystone_configuration_config-options_0049",
+        "cinder_configuration_block-storage_service-token_0006",
+        "keystone_configuration_config-options_0014",
+        "keystone_configuration_config-options_0020",
+        "keystone_configuration_config-options_0048"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_config-options_0049",
+        "keystone_configuration_config-options_0019"
+      ],
+      "missing_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.3333333333333333,
+      "gold_coverage_at_10": 0.6666666666666666,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 26.246400084346533
+    },
+    {
+      "id": "q080",
+      "question": "In the Swift object storage API, how do accounts and containers form the resource hierarchy, and how does a bulk-delete operation act on it?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_object_api_v1_overview_0001",
+        "swift_api_object_api_v1_overview_0002",
+        "swift_api_object_api_v1_overview_0003"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "swift_api_object_api_v1_overview_0003",
+        "swift_api_object_api_v1_overview_0002",
+        "swift_api_object_api_v1_overview_0001",
+        "swift_middleware_0023",
+        "swift_overview_policies_0018",
+        "swift_api_form_post_middleware_0003",
+        "swift_overview_policies_0007",
+        "swift_overview_0002",
+        "swift_middleware_0049",
+        "swift_overview_policies_0006"
+      ],
+      "found_gold_chunks": [
+        "swift_api_object_api_v1_overview_0001",
+        "swift_api_object_api_v1_overview_0002",
+        "swift_api_object_api_v1_overview_0003"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 3,
+      "mrr_at_10": 1.0,
+      "latency_ms": 14.572600019164383
+    },
+    {
+      "id": "q081",
+      "question": "How does Neutron ML2 work as a framework, which tunnel types does it support, and how is a QoS minimum-bandwidth policy applied on top of it?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "neutron",
+      "gold_chunk_ids": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_admin_config-ml2_0002",
+        "neutron_admin_config-qos-min-bw_0001"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "neutron_admin_config-qos-min-bw_0006",
+        "neutron_admin_config-qos-min-bw_0001",
+        "neutron_admin_config_0004",
+        "neutron_admin_config-qos_0003",
+        "neutron_admin_config-qos-min-pps_0004",
+        "neutron_admin_config-qos_0004",
+        "neutron_admin_config-qos-min-pps_0001",
+        "neutron_overview_0002",
+        "neutron_admin_config-qos_0001",
+        "neutron_admin_0001"
+      ],
+      "found_gold_chunks": [
+        "neutron_admin_config-qos-min-bw_0001"
+      ],
+      "missing_gold_chunks": [
+        "neutron_admin_config-ml2_0001",
+        "neutron_admin_config-ml2_0002"
+      ],
+      "gold_coverage_at_5": 0.3333333333333333,
+      "gold_coverage_at_10": 0.3333333333333333,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 2,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.5,
+      "latency_ms": 28.95049995277077
+    },
+    {
+      "id": "q082",
+      "question": "What constraints apply when uploading and listing Swift objects, considering the maximum object size, the object name length limit, and pagination?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_api_large_objects_0001",
+        "swift_api_object_api_v1_overview_0005",
+        "swift_api_pagination_0001"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "swift_api_object_api_v1_overview_0004",
+        "swift_middleware_0002",
+        "swift_api_large_objects_0008",
+        "swift_overview_container_sharding_0021",
+        "swift_api_large_objects_0003",
+        "swift_api_large_objects_0005",
+        "swift_development_ondisk_backends_0010",
+        "swift_api_large_objects_0004",
+        "swift_middleware_0065",
+        "swift_api_large_objects_0002"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "swift_api_large_objects_0001",
+        "swift_api_object_api_v1_overview_0005",
+        "swift_api_pagination_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 29.05590005684644
+    },
+    {
+      "id": "q083",
+      "question": "How does Nova organize compute hosts into cells, schedule instances onto them, and enforce quotas through unified limits?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "nova",
+      "gold_chunk_ids": [
+        "nova_admin_cells_0001",
+        "nova_admin_scheduling_0001",
+        "nova_user_unified-limits_0001"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "nova_overview_0003",
+        "nova_admin_cells_0015",
+        "nova_admin_0006",
+        "nova_admin_cells_0021",
+        "nova_admin_0003",
+        "nova_admin_0004",
+        "nova_admin_cells_0026",
+        "nova_admin_0005",
+        "nova_admin_0002",
+        "nova_admin_cells_0007"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_admin_cells_0001",
+        "nova_admin_scheduling_0001",
+        "nova_user_unified-limits_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 13.298900099471211
+    },
+    {
+      "id": "q084",
+      "question": "How can a large Swift deployment be scaled by sharding containers, applying storage policies, and laying out zones?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "swift",
+      "gold_chunk_ids": [
+        "swift_overview_container_sharding_0001",
+        "swift_overview_policies_0001",
+        "swift_deployment_guide_0003"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "swift_deployment_guide_0001",
+        "nova_admin_0002",
+        "swift_overview_container_sharding_0013",
+        "swift_overview_policies_0007",
+        "swift_overview_container_sharding_0001",
+        "swift_overview_policies_0006",
+        "swift_overview_policies_0003",
+        "swift_overview_policies_0019",
+        "swift_admin_guide_0001",
+        "swift_overview_policies_0002"
+      ],
+      "found_gold_chunks": [
+        "swift_overview_container_sharding_0001"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_policies_0001",
+        "swift_deployment_guide_0003"
+      ],
+      "gold_coverage_at_5": 0.3333333333333333,
+      "gold_coverage_at_10": 0.3333333333333333,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 5,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.2,
+      "latency_ms": 19.534299965016544
+    },
+    {
+      "id": "q085",
+      "question": "What is Heat, what API formats does its architecture expose, and how are its services created during installation?",
+      "type": "multi_hop",
+      "hop": "3+-hop",
+      "service": "heat",
+      "gold_chunk_ids": [
+        "heat_overview_0001",
+        "heat_developing_guides_architecture_0001",
+        "heat_install_install-rdo_0005"
+      ],
+      "num_gold_chunks": 3,
+      "retrieved_top10": [
+        "nova_overview_0002",
+        "nova_admin_0002",
+        "heat_developing_guides_architecture_0001",
+        "keystone_overview_0001",
+        "nova_admin_0001",
+        "placement_install_from-pypi_0001",
+        "glance_contributor_overview_0002",
+        "swift_overview_erasure_code_0003",
+        "barbican_configuration_troubleshooting_0005",
+        "keystone_admin_configuration_0004"
+      ],
+      "found_gold_chunks": [
+        "heat_developing_guides_architecture_0001"
+      ],
+      "missing_gold_chunks": [
+        "heat_overview_0001",
+        "heat_install_install-rdo_0005"
+      ],
+      "gold_coverage_at_5": 0.3333333333333333,
+      "gold_coverage_at_10": 0.3333333333333333,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 3,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.3333333333333333,
+      "latency_ms": 8.859200053848326
+    },
+    {
+      "id": "q086",
+      "question": "How do Keystone roles end up controlling access to Swift containers?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "keystone_overview_0001",
+        "swift_overview_auth_0003"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "swift_overview_auth_0005",
+        "swift_overview_auth_0006",
+        "swift_middleware_0040",
+        "swift_overview_auth_0007",
+        "swift_admin_guide_0012",
+        "keystone_admin_configuration_0006",
+        "keystone_admin_configuration_0019",
+        "swift_development_ondisk_backends_0001",
+        "swift_middleware_0070",
+        "swift_overview_auth_0004"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "keystone_overview_0001",
+        "swift_overview_auth_0003"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 13.922199956141412
+    },
+    {
+      "id": "q087",
+      "question": "How does Nova use Glance when launching a compute instance?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "nova_overview_0001",
+        "glance_install_get-started_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_install_compute_overview_0001",
+        "nova_overview_0002",
+        "nova_admin_scheduling_0001",
+        "nova_user_block-device-mapping_0007",
+        "nova_user_block-device-mapping_0003",
+        "nova_admin_cells_0023",
+        "nova_overview_0003",
+        "glance_contributor_overview_0002",
+        "nova_admin_0001",
+        "nova_admin_0008"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_overview_0001",
+        "glance_install_get-started_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 12.898499961011112
+    },
+    {
+      "id": "q088",
+      "question": "How does Nova rely on Neutron to give compute instances network connectivity?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "nova_overview_0001",
+        "neutron_overview_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "neutron_admin_intro-os-networking_0002",
+        "neutron_admin_ovn_refarch_refarch_0002",
+        "neutron_admin_config-qos-min-bw_0001",
+        "neutron_admin_intro-os-networking_0001",
+        "neutron_admin_intro-os-networking_0003",
+        "neutron_admin_config-ipv6_0001",
+        "nova_overview_0004",
+        "neutron_install_common_get-started-networking_0001",
+        "nova_user_support-matrix_0001",
+        "neutron_admin_config-ipv6_0012"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [
+        "nova_overview_0001",
+        "neutron_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 7.845500018447638
+    },
+    {
+      "id": "q089",
+      "question": "How does Nova depend on the placement service when creating a virtual machine?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "nova_overview_0001",
+        "placement_contributor_architecture_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "nova_admin_0001",
+        "nova_admin_scheduling_0001",
+        "nova_user_support-matrix_0047",
+        "nova_overview_0001",
+        "nova_install_compute-install-ubuntu_0005",
+        "nova_install_compute-install-rdo_0005",
+        "neutron_admin_config-qos-min-bw_0006",
+        "nova_install_compute_overview_0001",
+        "placement_user_0001",
+        "nova_admin_0003"
+      ],
+      "found_gold_chunks": [
+        "nova_overview_0001"
+      ],
+      "missing_gold_chunks": [
+        "placement_contributor_architecture_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 4,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.25,
+      "latency_ms": 21.80769992992282
+    },
+    {
+      "id": "q090",
+      "question": "How does Nova rely on Keystone for identity and authentication?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "nova_overview_0001",
+        "keystone_overview_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "keystone_overview_0001",
+        "keystone_overview_0002",
+        "keystone_admin_0001",
+        "keystone_admin_configuration_0009",
+        "keystone_overview_0003",
+        "keystone_getting-started_architecture_0007",
+        "keystone_admin_configuration_0006",
+        "keystone_admin_configuration_0001",
+        "keystone_admin_configuration_0010",
+        "keystone_configuration_config-options_0001"
+      ],
+      "found_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "missing_gold_chunks": [
+        "nova_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 5.348100094124675
+    },
+    {
+      "id": "q091",
+      "question": "How can the Image service store its virtual machine images in the Object Storage service?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "glance_install_get-started_0001",
+        "swift_overview_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "glance_install_get-started_0001",
+        "nova_admin_architecture_0005",
+        "nova_admin_architecture_0004",
+        "glance_overview_0001",
+        "glance_install_verify_0003",
+        "nova_admin_0001",
+        "glance_install_verify_0002",
+        "nova_install_compute_overview_0001",
+        "glance_install_verify_0001",
+        "swift_api_object_api_v1_overview_0003"
+      ],
+      "found_gold_chunks": [
+        "glance_install_get-started_0001"
+      ],
+      "missing_gold_chunks": [
+        "swift_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 1,
+      "all_gold_rank": null,
+      "mrr_at_10": 1.0,
+      "latency_ms": 17.348999972455204
+    },
+    {
+      "id": "q092",
+      "question": "In which release was JSON-formatted policy deprecated for Keystone compared with Neutron?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "keystone_configuration_policy_0001",
+        "neutron_configuration_policy_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "neutron_configuration_policy_0001",
+        "keystone_configuration_policy_0001",
+        "placement_configuration_config_0009",
+        "barbican_configuration_policy_0001",
+        "keystone_configuration_config-options_0037",
+        "barbican_configuration_config_0020",
+        "keystone_configuration_config-options_0036",
+        "neutron_admin_config-qos-min-bw_0003",
+        "neutron_admin_config-qos-min-pps_0008",
+        "neutron_admin_config-qos-min-pps_0004"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_policy_0001",
+        "neutron_configuration_policy_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 2,
+      "mrr_at_10": 1.0,
+      "latency_ms": 18.43109994661063
+    },
+    {
+      "id": "q093",
+      "question": "In which release was JSON-formatted policy deprecated for Keystone compared with Barbican?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "keystone_configuration_policy_0001",
+        "barbican_configuration_policy_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "barbican_configuration_policy_0001",
+        "keystone_configuration_policy_0001",
+        "neutron_configuration_policy_0001",
+        "placement_configuration_config_0009",
+        "keystone_configuration_config-options_0037",
+        "barbican_configuration_config_0020",
+        "keystone_configuration_config-options_0036",
+        "barbican_configuration_config_0001",
+        "neutron_admin_config-qos-min-bw_0003",
+        "barbican_contributor_microversions_0007"
+      ],
+      "found_gold_chunks": [
+        "keystone_configuration_policy_0001",
+        "barbican_configuration_policy_0001"
+      ],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 1.0,
+      "gold_coverage_at_10": 1.0,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": true,
+      "all_gold_at_10": true,
+      "strict_status": "PASS",
+      "first_relevant_rank": 1,
+      "all_gold_rank": 2,
+      "mrr_at_10": 1.0,
+      "latency_ms": 20.292500033974648
+    },
+    {
+      "id": "q094",
+      "question": "How do Cinder service tokens depend on Keystone for identity and authentication?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "cinder_configuration_block-storage_service-token_0001",
+        "keystone_overview_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "keystone_admin_0001",
+        "keystone_overview_0002",
+        "keystone_overview_0003",
+        "keystone_overview_0001",
+        "cinder_configuration_block-storage_service-token_0003",
+        "cinder_configuration_block-storage_service-token_0005",
+        "keystone_admin_event_notifications_0014",
+        "keystone_admin_configuration_0009",
+        "keystone_admin_configuration_0018",
+        "keystone_configuration_config-options_0048"
+      ],
+      "found_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "missing_gold_chunks": [
+        "cinder_configuration_block-storage_service-token_0001"
+      ],
+      "gold_coverage_at_5": 0.5,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": true,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 4,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.25,
+      "latency_ms": 9.747800067998469
+    },
+    {
+      "id": "q095",
+      "question": "How does Heat use Keystone roles such as heat_stack_owner when orchestrating resources?",
+      "type": "cross_document",
+      "hop": "2-hop",
+      "service": "cross-service",
+      "gold_chunk_ids": [
+        "heat_install_install-rdo_0011",
+        "keystone_overview_0001"
+      ],
+      "num_gold_chunks": 2,
+      "retrieved_top10": [
+        "heat_install_install-rdo_0013",
+        "heat_install_install-debian_0012",
+        "heat_install_install-ubuntu_0012",
+        "heat_install_install-debian_0010",
+        "heat_install_install-ubuntu_0010",
+        "heat_install_install-rdo_0011",
+        "heat_install_install-rdo_0012",
+        "heat_install_install-rdo_0010",
+        "heat_install_install-ubuntu_0013",
+        "heat_install_install-debian_0013"
+      ],
+      "found_gold_chunks": [
+        "heat_install_install-rdo_0011"
+      ],
+      "missing_gold_chunks": [
+        "keystone_overview_0001"
+      ],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.5,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": true,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "FAIL",
+      "first_relevant_rank": 6,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.16666666666666666,
+      "latency_ms": 11.409299913793802
+    },
+    {
+      "id": "q096",
+      "question": "How do I configure OpenStack to automatically provision and manage Kubernetes container clusters as a service?",
+      "type": "unanswerable",
+      "hop": "unanswerable",
+      "service": "unanswerable",
+      "gold_chunk_ids": [],
+      "num_gold_chunks": 0,
+      "retrieved_top10": [
+        "nova_admin_cells_0024",
+        "nova_admin_cells_0023",
+        "swift_admin_guide_0016",
+        "nova_admin_cells_0021",
+        "swift_overview_0001",
+        "nova_admin_cells_0022",
+        "swift_admin_guide_0017",
+        "swift_admin_guide_0015",
+        "barbican_install_install-rdo_0005",
+        "barbican_install_install-ubuntu_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "UNANSWERABLE",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 21.246899967081845
+    },
+    {
+      "id": "q097",
+      "question": "How do I set up Ceilometer to collect and meter telemetry data across my OpenStack cloud?",
+      "type": "unanswerable",
+      "hop": "unanswerable",
+      "service": "unanswerable",
+      "gold_chunk_ids": [],
+      "num_gold_chunks": 0,
+      "retrieved_top10": [
+        "swift_admin_guide_0020",
+        "swift_admin_guide_0021",
+        "nova_overview_0003",
+        "nova_admin_cells_0003",
+        "nova_admin_cells_0027",
+        "nova_admin_0002",
+        "nova_admin_cells_0026",
+        "barbican_configuration_troubleshooting_0002",
+        "neutron_admin_config-qos_0006",
+        "swift_deployment_guide_0004"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "UNANSWERABLE",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 10.270199971273541
+    },
+    {
+      "id": "q098",
+      "question": "How do I use the Sahara data processing service to launch Hadoop and Spark clusters on OpenStack?",
+      "type": "unanswerable",
+      "hop": "unanswerable",
+      "service": "unanswerable",
+      "gold_chunk_ids": [],
+      "num_gold_chunks": 0,
+      "retrieved_top10": [
+        "swift_overview_0001",
+        "swift_admin_guide_0015",
+        "swift_admin_guide_0016",
+        "neutron_admin_config-qos-min-pps_0001",
+        "swift_admin_guide_0017",
+        "swift_middleware_0042",
+        "swift_deployment_guide_0014",
+        "swift_overview_policies_0016",
+        "nova_admin_cells_0022",
+        "nova_install_compute_overview_0001"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "UNANSWERABLE",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 25.053199962712824
+    },
+    {
+      "id": "q099",
+      "question": "How do I use the Senlin clustering service to create and autoscale clusters of nodes in OpenStack?",
+      "type": "unanswerable",
+      "hop": "unanswerable",
+      "service": "unanswerable",
+      "gold_chunk_ids": [],
+      "num_gold_chunks": 0,
+      "retrieved_top10": [
+        "swift_overview_policies_0001",
+        "nova_admin_cells_0003",
+        "swift_admin_guide_0015",
+        "nova_admin_0004",
+        "swift_admin_guide_0016",
+        "nova_admin_cells_0022",
+        "nova_admin_cells_0021",
+        "swift_overview_0001",
+        "swift_admin_guide_0017",
+        "barbican_contributor_database_migrations_0001"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "UNANSWERABLE",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 7.330499938689172
+    },
+    {
+      "id": "q100",
+      "question": "How do I enable Masakari to provide automated instance high availability and evacuation for failed compute hosts?",
+      "type": "unanswerable",
+      "hop": "unanswerable",
+      "service": "unanswerable",
+      "gold_chunk_ids": [],
+      "num_gold_chunks": 0,
+      "retrieved_top10": [
+        "nova_admin_scheduling_0001",
+        "nova_admin_0010",
+        "nova_admin_0003",
+        "nova_overview_0003",
+        "nova_admin_0008",
+        "nova_admin_cells_0027",
+        "nova_admin_0004",
+        "nova_admin_0006",
+        "nova_admin_0007",
+        "nova_admin_cells_0005"
+      ],
+      "found_gold_chunks": [],
+      "missing_gold_chunks": [],
+      "gold_coverage_at_5": 0.0,
+      "gold_coverage_at_10": 0.0,
+      "any_gold_recall_at_5": false,
+      "any_gold_recall_at_10": false,
+      "all_gold_at_5": false,
+      "all_gold_at_10": false,
+      "strict_status": "UNANSWERABLE",
+      "first_relevant_rank": null,
+      "all_gold_rank": null,
+      "mrr_at_10": 0.0,
+      "latency_ms": 16.883099917322397
+    }
+  ]
+}
