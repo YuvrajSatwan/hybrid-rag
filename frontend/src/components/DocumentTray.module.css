@@ -1,0 +1,331 @@
+.container {
+  width: 100%;
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-bottom: 4px;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-1);
+}
+
+.countBadge {
+  font-size: 12px;
+  color: var(--c-text-muted);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--r-sm);
+  transition: all var(--transition-fast);
+}
+
+.addBtn:hover {
+  color: var(--c-text-1);
+  background: var(--c-bg-subtle);
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--c-surface);
+}
+
+.docCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--c-border-subtle);
+  font-size: 13px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.docCard:last-child {
+  border-bottom: none;
+}
+
+.docCard:hover {
+  background: var(--c-card-hover);
+}
+
+.docLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--c-text-1);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.extBadge {
+  display: none;
+}
+
+.docName {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.docSize {
+  font-size: 12px;
+  color: var(--c-text-muted);
+  flex-shrink: 0;
+}
+
+.chunkMeta {
+  display: none;
+}
+
+.docRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--c-text-2);
+}
+
+.badge::before {
+  content: "●";
+  margin-right: 4px;
+  font-size: 10px;
+}
+
+.ready::before {
+  color: var(--c-text-3); /* Very subtle indicator for ready */
+}
+
+.indexing::before {
+  color: var(--c-warning);
+}
+
+.failed::before {
+  color: var(--c-error);
+}
+
+.pulseDot {
+  display: none;
+}
+
+.retryBtn {
+  background: transparent;
+  border: none;
+  color: var(--c-error);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+.retryBtn:hover {
+  color: var(--c-text-1);
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.deleteBtn:hover {
+  color: var(--c-error);
+  background: var(--c-bg-subtle);
+}
+
+.inlineDrop {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px dashed var(--c-border-hover);
+  background: var(--c-bg-subtle);
+  color: var(--c-text-2);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+.inlineDrop:last-child {
+  border-bottom: none;
+}
+
+.inlineDrop:hover, .dropActive {
+  background: var(--c-accent-light);
+  color: var(--c-accent);
+}
+
+.rejectionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-bottom: 1px solid var(--c-border-subtle);
+}
+.rejectionsWrapper:last-child {
+  border-bottom: none;
+}
+
+.rejectionItem {
+  padding: 10px 14px;
+  background: var(--c-bg-subtle);
+  border-bottom: 1px solid var(--c-border-subtle);
+  color: var(--c-error);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rejectionItem:last-child {
+  border-bottom: none;
+}
+
+.rejectionText {
+  flex: 1;
+  min-width: 0;
+}
+
+.closeRejBtn {
+  background: none;
+  border: none;
+  color: var(--c-text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 2px;
+}
+.closeRejBtn:hover {
+  color: var(--c-text-1);
+}
+
+/* Delete Confirmation Modal — Native style */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.modalDialog {
+  background: var(--c-surface-elevated);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.modalTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-text-1);
+}
+
+.modalDescription {
+  font-size: 13px;
+  color: var(--c-text-2);
+  line-height: 1.4;
+}
+
+.modalActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.modalCancelBtn {
+  background: transparent;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-1);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modalCancelBtn:hover {
+  background: var(--c-bg-subtle);
+}
+
+.modalConfirmBtn {
+  background: var(--c-error);
+  border: 1px solid var(--c-error);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.modalConfirmBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.modalConfirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .docName { max-width: 140px; }
+}

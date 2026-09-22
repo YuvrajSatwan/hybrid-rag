@@ -1,0 +1,207 @@
+.container {
+  flex: 1;
+  height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--c-bg);
+  overflow: hidden;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px var(--space-4);
+  border-bottom: 1px solid var(--c-border-subtle);
+  background-color: var(--c-bg);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.threadMeta {
+  font-size: 11.5px;
+  color: var(--c-text-muted);
+}
+
+.newChatBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--r-sm);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  border: 1px solid var(--c-border);
+  background-color: var(--c-surface);
+  transition: all var(--transition-fast);
+}
+
+.newChatBtn:hover {
+  background-color: var(--c-surface-hover);
+  color: var(--c-text-1);
+  border-color: var(--c-border-hover);
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-4) 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedWrapper {
+  width: 100%;
+  max-width: var(--composer-max-w);
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Tasteful Empty Conversation State ───────────────────────────────────── */
+.emptyConversation {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) 0;
+  user-select: none;
+}
+
+.emptyContent {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+}
+
+.emptyTitle {
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  color: var(--c-text-1);
+}
+
+.emptySubtitle {
+  font-size: 14.5px;
+  color: var(--c-text-muted);
+  max-width: 440px;
+  margin-bottom: var(--space-6);
+  line-height: 1.5;
+}
+
+.suggestionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.suggestionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  background-color: var(--c-bg-subtle);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-2);
+  text-align: left;
+  transition: all var(--transition-fast);
+  gap: 8px;
+}
+
+.suggestionBtn:hover {
+  background-color: var(--c-surface-hover);
+  border-color: var(--c-border-hover);
+  color: var(--c-text-1);
+  transform: translateY(-1px);
+}
+
+.suggestionText {
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 1.4;
+}
+
+/* ─── Message List ───────────────────────────────────────────────────────── */
+.messageList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.loadingRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.loadingCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  background-color: var(--c-bg-subtle);
+  border: 1px solid var(--c-border);
+}
+
+.loadingPulse {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--r-full);
+  background-color: var(--c-accent);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.loadingText {
+  font-size: 12.5px;
+  color: var(--c-text-muted);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.anchor {
+  height: 1px;
+}
+
+/* ─── Anchored Composer ──────────────────────────────────────────────────── */
+.composerWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  background: linear-gradient(to top, var(--c-bg) 75%, transparent 100%);
+  z-index: 20;
+}
+
+@media (max-width: 640px) {
+  .suggestionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scrollArea {
+    padding: var(--space-4) var(--space-3) 110px;
+  }
+
+  .composerWrapper {
+    padding: var(--space-2) var(--space-3) var(--space-3);
+  }
+}

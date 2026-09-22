@@ -1,0 +1,164 @@
+.sidebar {
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--header-h));
+  position: sticky;
+  top: var(--header-h);
+  background-color: var(--c-bg-sidebar);
+  border-right: 1px solid var(--c-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform var(--transition-normal);
+  z-index: 30;
+}
+
+.header {
+  height: 48px;
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--c-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted);
+}
+
+.countBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--r-full);
+  background-color: var(--c-border-subtle);
+  color: var(--c-text-2);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--r-sm);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  border: 1px solid var(--c-border);
+  background-color: var(--c-surface);
+  transition: all var(--transition-fast);
+}
+
+.addBtn:hover {
+  background-color: var(--c-surface-hover);
+  color: var(--c-text-1);
+  border-color: var(--c-border-hover);
+}
+
+.docList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-2) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dropOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--c-surface);
+  border: 2px dashed var(--c-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  z-index: 35;
+  color: var(--c-accent);
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--c-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  background-color: var(--c-bg-sidebar);
+}
+
+.footerAddBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--r-md);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  border: 1px dashed var(--c-border-hover);
+  background-color: var(--c-surface);
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.footerAddBtn:hover {
+  border-color: var(--c-accent);
+  color: var(--c-text-1);
+  background-color: var(--c-surface-hover);
+}
+
+.formatHint {
+  font-size: 10px;
+  color: var(--c-text-3);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Mobile Drawer ──────────────────────────────────────────────────────── */
+.mobileBackdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: 0;
+    height: calc(100vh - var(--header-h));
+    width: 280px;
+    max-width: 85vw;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(-100%);
+    z-index: 50;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .mobileBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 45;
+  }
+}

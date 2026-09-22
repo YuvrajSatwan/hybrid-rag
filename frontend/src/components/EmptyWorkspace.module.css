@@ -1,0 +1,175 @@
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+  width: 100%;
+}
+
+.workspaceCard {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  color: var(--c-text-1);
+}
+
+.subtitle {
+  font-size: 14.5px;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+}
+
+.dropzone {
+  width: 100%;
+  background-color: var(--c-bg-subtle);
+  border: 1px dashed var(--c-border-hover);
+  border-radius: var(--r-xl);
+  padding: var(--space-8) var(--space-6);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.dropzone:hover {
+  background-color: var(--c-surface-hover);
+  border-color: var(--c-text-muted);
+}
+
+.dropzoneActive {
+  background-color: var(--c-surface-hover);
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 2px var(--c-accent-light);
+}
+
+.dropInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.uploadIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-full);
+  background-color: var(--c-surface);
+  border: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-2);
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropHeading {
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--c-text-1);
+}
+
+.dropSub {
+  font-size: 13px;
+  color: var(--c-text-muted);
+}
+
+.browseBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--r-md);
+  background-color: var(--c-accent);
+  color: var(--c-accent-fg);
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  margin-top: 4px;
+}
+
+.browseBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.browseBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.formatMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--c-text-3);
+  margin-top: 2px;
+}
+
+.metaDot {
+  font-size: 9px;
+}
+
+/* ─── Rejections List ────────────────────────────────────────────────────── */
+.rejectionsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rejectionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--r-md);
+  background-color: var(--c-error-bg);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--c-error);
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.rejectionText {
+  flex: 1;
+  color: var(--c-text-2);
+}
+
+.rejectionText strong {
+  color: var(--c-error);
+  margin-right: 4px;
+}
+
+.dismissBtn {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--c-text-muted);
+  padding: 2px 4px;
+  transition: color var(--transition-fast);
+}
+
+.dismissBtn:hover {
+  color: var(--c-text-1);
+}

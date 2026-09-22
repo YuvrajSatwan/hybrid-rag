@@ -1,0 +1,344 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-12) 0 var(--space-8);
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.brandSubtitle {
+  display: none;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--c-text-1);
+  line-height: 1.15;
+  margin-bottom: var(--space-3);
+}
+
+.sub {
+  font-size: 15px;
+  color: var(--c-text-2);
+  max-width: 440px;
+  line-height: 1.55;
+  margin-bottom: var(--space-8);
+}
+
+.dropzone {
+  width: 100%;
+  padding: var(--space-6) var(--space-4);
+  border: 1px dashed var(--c-border-hover);
+  border-radius: var(--r-md);
+  background: var(--c-bg-subtle);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.dropzone:hover {
+  border-color: var(--c-accent);
+  background: var(--c-accent-light);
+}
+
+.dropzone:focus-visible {
+  border-color: var(--c-accent);
+  outline: 2px solid var(--c-border-focus);
+}
+
+.dropzoneActive {
+  border-color: var(--c-accent) !important;
+  background: var(--c-accent-light) !important;
+}
+
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.dropIconBox {
+  display: none;
+}
+
+.dropTextGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dropMainText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text-1);
+}
+
+.dropMainTextHighlight {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-accent);
+}
+
+.dropSubText {
+  display: none;
+}
+
+.browseBtn {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.browseBtn:hover {
+  color: var(--c-text-1);
+}
+
+.formatBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.formatBadge {
+  font-size: 11px;
+  color: var(--c-text-muted);
+}
+
+.formatBadge::after {
+  content: "·";
+  margin-left: 6px;
+  color: var(--c-border);
+}
+.formatBadge:last-of-type::after {
+  content: "";
+}
+
+.formatSizeBadge {
+  font-size: 11px;
+  color: var(--c-text-muted);
+}
+
+/* Rejections UX */
+.rejectionsWrapper {
+  width: 100%;
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rejectionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  background: var(--c-bg-subtle);
+  border: 1px solid var(--c-border);
+  color: var(--c-error);
+  font-size: 13px;
+  text-align: left;
+}
+
+.rejectionIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.rejectionBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  line-height: 1.4;
+}
+
+.rejectionFilename {
+  font-weight: 500;
+}
+
+.rejectionReason {
+  color: var(--c-text-2);
+}
+
+.dismissRejectionBtn {
+  background: none;
+  border: none;
+  color: var(--c-text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px;
+}
+.dismissRejectionBtn:hover {
+  color: var(--c-text-1);
+}
+
+/* File Queue */
+.fileList {
+  width: 100%;
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.queueHeader {
+  display: none;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--c-border-subtle);
+  background: var(--c-surface);
+  font-size: 13px;
+}
+.fileItem:last-child {
+  border-bottom: none;
+}
+
+.fileItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--c-text-1);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.extBadge {
+  display: none;
+}
+
+.fileName {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.fileSize {
+  color: var(--c-text-muted);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.fileItemRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.statusBadge {
+  font-size: 12px;
+  color: var(--c-text-2);
+}
+.ready::before, .uploading::before, .processing::before, .indexing::before, .failed::before {
+  content: "●";
+  margin-right: 4px;
+  font-size: 10px;
+}
+.ready::before { color: var(--c-success); }
+.uploading::before, .processing::before, .indexing::before { color: var(--c-warning); }
+.failed::before { color: var(--c-error); }
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: var(--c-text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px;
+}
+.removeBtn:hover {
+  color: var(--c-text-1);
+}
+
+.uploadActionRow {
+  margin-top: var(--space-4);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uploadActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-border-hover);
+  background: var(--c-surface-elevated);
+  color: var(--c-text-1);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.uploadActionBtn:hover:not(:disabled) {
+  background: var(--c-bg-subtle);
+  border-color: var(--c-text-3);
+}
+
+.uploadActionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.footerNote {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .root { padding: var(--space-8) 0 var(--space-4); }
+  .heading { font-size: 24px; }
+  .dropzone { padding: var(--space-4); }
+  .fileName { max-width: 150px; }
+}

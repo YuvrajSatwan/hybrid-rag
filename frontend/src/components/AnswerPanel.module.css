@@ -1,0 +1,228 @@
+.root {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+/* Query echo */
+.queryRow {
+  display: none; /* In ChatGPT-like interfaces, the query is a separate chat bubble. We'll hide this header echo to clean it up. */
+}
+
+/* Section scaffolding */
+.sectionHeader { margin-bottom: 8px; }
+
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-text-1);
+}
+
+.divider {
+  display: none;
+}
+
+/* Answer body */
+.answerBody {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--c-text-1);
+}
+
+.para {
+  margin-bottom: 16px;
+}
+.para:last-child { margin-bottom: 0; }
+
+.list {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.list li {
+  margin-bottom: 6px;
+}
+
+/* Inline code */
+.inlineCode {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  background: var(--c-surface-elevated);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-xs);
+  padding: 2px 5px;
+  color: var(--c-text-1);
+}
+
+/* Citation interactive pill [N] */
+.citePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-muted);
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: super;
+  line-height: 1;
+  margin: 0 1px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+.citePill::before { content: "["; }
+.citePill::after { content: "]"; }
+
+.citePill:hover {
+  color: var(--c-text-1);
+}
+.citePill:focus-visible {
+  outline: 2px solid var(--c-border-focus);
+}
+
+/* Fenced Code Blocks */
+.codeBlockWrapper {
+  margin: 20px 0;
+  border-radius: var(--r-md);
+  background: var(--c-bg-subtle);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid var(--c-border-subtle);
+}
+
+[data-theme="dark"] .codeHeader {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.macTrafficLights {
+  display: none;
+}
+
+.codeLang {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: lowercase;
+  color: var(--c-text-muted);
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: var(--c-text-2);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: var(--r-xs);
+  transition: all var(--transition-fast);
+}
+.copyBtn:hover {
+  color: var(--c-text-1);
+  background: var(--c-surface-elevated);
+}
+
+.pre {
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--c-text-1);
+}
+
+/* Typography elements in answers */
+.heading2, .heading3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--c-text-1);
+  margin: 24px 0 12px;
+}
+
+.heading4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-text-1);
+  margin: 20px 0 8px;
+}
+
+.blockquote {
+  border-left: 2px solid var(--c-border);
+  padding-left: 14px;
+  margin: 16px 0;
+  color: var(--c-text-2);
+}
+
+.dividerLine {
+  border: none;
+  border-top: 1px solid var(--c-border-subtle);
+  margin: 24px 0;
+}
+
+.listOrdered {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.listOrdered li {
+  margin-bottom: 6px;
+}
+
+/* Metadata row */
+.meta {
+  display: none;
+}
+
+/* Citations Details Element */
+.citationsDetails {
+  margin-top: 24px;
+}
+
+.citationsSummary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  cursor: pointer;
+  user-select: none;
+  list-style: none; /* Hide default triangle in many browsers */
+  transition: color var(--transition-fast);
+}
+.citationsSummary::-webkit-details-marker {
+  display: none;
+}
+.citationsSummary:hover {
+  color: var(--c-text-1);
+}
+.summaryIcon {
+  transition: transform 0.2s ease;
+}
+.citationsDetails[open] .summaryIcon {
+  transform: rotate(90deg);
+}
+
+.citationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-left: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .answerBody { font-size: 15px; }
+  .pre { font-size: 12px; }
+}
+

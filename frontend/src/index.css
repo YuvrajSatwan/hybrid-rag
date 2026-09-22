@@ -1,0 +1,227 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   HYBRID-RAG · Design System Tokens & Base Styles
+   Minimal + Premium + Functional + Polished
+   Apple-level restraint + ChatGPT-level usability
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Surface & Background — Light Mode */
+  --c-bg:                #ffffff;
+  --c-bg-subtle:         #f8f9fa;
+  --c-bg-sidebar:        #fafafa;
+  --c-surface:           #ffffff;
+  --c-surface-hover:     #f4f4f5;
+  --c-surface-elevated:  #ffffff;
+  --c-card:              #ffffff;
+  --c-card-hover:        #fafafa;
+  --c-code-bg:           #f4f4f6;
+
+  /* Borders */
+  --c-border:            rgba(0, 0, 0, 0.08);
+  --c-border-subtle:     rgba(0, 0, 0, 0.04);
+  --c-border-hover:      rgba(0, 0, 0, 0.16);
+  --c-border-focus:      #111111;
+
+  /* Typography */
+  --c-text-1:            #111827;
+  --c-text-2:            #4b5563;
+  --c-text-muted:        #6b7280;
+  --c-text-3:            #9ca3af;
+
+  /* Accent & Interactive */
+  --c-accent:            #111111;
+  --c-accent-hover:      #27272a;
+  --c-accent-light:      rgba(0, 0, 0, 0.04);
+  --c-accent-fg:         #ffffff;
+
+  /* Status Colors */
+  --c-success:           #10b981;
+  --c-success-bg:        rgba(16, 185, 129, 0.08);
+  --c-warning:           #f59e0b;
+  --c-warning-bg:        rgba(245, 158, 11, 0.08);
+  --c-error:             #ef4444;
+  --c-error-bg:          rgba(239, 68, 68, 0.06);
+
+  /* Badge tints */
+  --badge-pdf-bg:        rgba(239, 68, 68, 0.08);
+  --badge-pdf-fg:        #dc2626;
+  --badge-md-bg:         rgba(59, 130, 246, 0.08);
+  --badge-md-fg:         #2563eb;
+  --badge-txt-bg:        rgba(107, 114, 128, 0.1);
+  --badge-txt-fg:        #4b5563;
+  --badge-html-bg:       rgba(249, 115, 22, 0.08);
+  --badge-html-fg:       #ea580c;
+
+  /* Spacing Scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Border Radii */
+  --r-xs:    4px;
+  --r-sm:    6px;
+  --r-md:    8px;
+  --r-lg:    12px;
+  --r-xl:    16px;
+  --r-full:  9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-composer: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  /* Typography Font Stack */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+
+  /* Transitions */
+  --ease:               cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast:    120ms var(--ease);
+  --transition-normal:  200ms var(--ease);
+
+  /* Layout dimensions */
+  --header-h:           52px;
+  --sidebar-w:          280px;
+  --composer-max-w:     760px;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --c-bg:                #121214;
+  --c-bg-subtle:         #18181b;
+  --c-bg-sidebar:        #151518;
+  --c-surface:           #18181b;
+  --c-surface-hover:     #232328;
+  --c-surface-elevated:  #202024;
+  --c-card:              #1c1c20;
+  --c-card-hover:        #242429;
+  --c-code-bg:           #1e1e24;
+
+  --c-border:            rgba(255, 255, 255, 0.09);
+  --c-border-subtle:     rgba(255, 255, 255, 0.05);
+  --c-border-hover:      rgba(255, 255, 255, 0.18);
+  --c-border-focus:      #ffffff;
+
+  --c-text-1:            #f3f4f6;
+  --c-text-2:            #a1a1aa;
+  --c-text-muted:        #71717a;
+  --c-text-3:            #52525b;
+
+  --c-accent:            #f4f4f5;
+  --c-accent-hover:      #ffffff;
+  --c-accent-light:      rgba(255, 255, 255, 0.08);
+  --c-accent-fg:         #121214;
+
+  --c-success:           #34d399;
+  --c-success-bg:        rgba(52, 211, 153, 0.12);
+  --c-warning:           #fbbf24;
+  --c-warning-bg:        rgba(251, 191, 36, 0.12);
+  --c-error:             #f87171;
+  --c-error-bg:          rgba(248, 113, 113, 0.12);
+
+  --badge-pdf-bg:        rgba(248, 113, 113, 0.14);
+  --badge-pdf-fg:        #fca5a5;
+  --badge-md-bg:         rgba(96, 165, 250, 0.14);
+  --badge-md-fg:         #93c5fd;
+  --badge-txt-bg:        rgba(161, 161, 170, 0.14);
+  --badge-txt-fg:        #d4d4d8;
+  --badge-html-bg:       rgba(251, 146, 60, 0.14);
+  --badge-html-fg:       #fdba74;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.65);
+  --shadow-composer: 0 4px 24px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Reset & Base ────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--c-bg);
+  color: var(--c-text-1);
+  min-height: 100vh;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Typography & Links ─────────────────────────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Focus Rings ───────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--c-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Custom Scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-border);
+  border-radius: var(--r-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-text-muted);
+}
+
+/* ── Reduced Motion Preference ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
