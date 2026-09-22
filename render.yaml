@@ -24,8 +24,6 @@ services:
   - type: web
     name: simple-rag-frontend
     env: static
-    region: oregon
-    plan: starter
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
