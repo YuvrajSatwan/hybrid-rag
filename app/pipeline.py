@@ -144,7 +144,10 @@ def run_query(
         )
 
     # Contextualize query if prior conversation history exists
+    t_ctx_start = time.perf_counter()
     search_query = contextualize_query(query=query, history=prior_history, conversation_id=cid)
+    t_ctx_end = time.perf_counter()
+    logger.info("STAGE_LATENCY | stage=contextualization | latency_ms=%.2f", (t_ctx_end - t_ctx_start) * 1000)
 
     # Retrieve using standalone contextualized query
     retrieved_chunks = personal_retriever.rank(search_query, top_k=top_k)
@@ -162,9 +165,14 @@ def run_query(
         )
 
     # Generate answer with conversation context + authoritative retrieved chunks
+    t_gen_start = time.perf_counter()
     answer = generate_answer(query, retrieved_chunks, history=prior_history)
+    t_gen_end = time.perf_counter()
+    logger.info("STAGE_LATENCY | stage=gemini_generation | latency_ms=%.2f", (t_gen_end - t_gen_start) * 1000)
+    
     latency_ms = (time.perf_counter() - t0) * 1000
 
+    t_cit_start = time.perf_counter()
     citations: list[Citation] = []
     for chunk in retrieved_chunks:
         citations.append(
@@ -178,6 +186,8 @@ def run_query(
                 snippet=_make_snippet(chunk.get("text", "")),
             )
         )
+    t_cit_end = time.perf_counter()
+    logger.info("STAGE_LATENCY | stage=citation_processing | latency_ms=%.2f", (t_cit_end - t_cit_start) * 1000)
 
     # Persist assistant turn with citations and latency
     conv_mgr.add_message(
@@ -189,10 +199,15 @@ def run_query(
         latency_ms=round(latency_ms, 1),
     )
 
+    return_latency_ms = round(latency_ms, 1)
+    
+    t_total_end = time.perf_counter()
+    logger.info("STAGE_LATENCY | stage=total_request | latency_ms=%.2f", (t_total_end - t0) * 1000)
+
     return QueryResponse(
         answer=answer,
         citations=citations,
-        latency_ms=round(latency_ms, 1),
+        latency_ms=return_latency_ms,
         workspace_id=target_id,
         conversation_id=cid,
     )
