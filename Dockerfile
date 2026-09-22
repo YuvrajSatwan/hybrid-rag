@@ -1,3 +1,18 @@
+# -----------------------------------
+# Stage 1: Build the React Frontend
+# -----------------------------------
+FROM node:18-alpine AS frontend-builder
+WORKDIR /frontend
+
+# Install dependencies and build
+COPY frontend/package*.json ./
+RUN npm install
+COPY frontend/ ./
+RUN npm run build
+
+# -----------------------------------
+# Stage 2: Build the FastAPI Backend
+# -----------------------------------
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -22,9 +37,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Pre-cache the cross-encoder reranker model so cold starts don't block
 RUN python -c "from sentence_transformers import CrossEncoder; CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')"
 
-# Copy source code
+# Copy backend source code
 COPY app/ app/
 COPY src/ src/
+
+# Copy built frontend from Stage 1
+COPY --from=frontend-builder /frontend/dist /app/frontend/dist
 
 # Ephemeral user documents root
 RUN mkdir -p data/user_documents
