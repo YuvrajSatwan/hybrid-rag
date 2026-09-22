@@ -28,6 +28,9 @@ from rank_bm25 import BM25Okapi
 
 logger = logging.getLogger(__name__)
 
+ENABLE_RERANKER = os.environ.get("ENABLE_RERANKER", "true").lower() == "true"
+logger.info("ENABLE_RERANKER=%s", ENABLE_RERANKER)
+
 RRF_K = 60
 RERANK_DEPTH = 30
 JINA_URL = "https://api.jina.ai/v1/embeddings"
@@ -191,7 +194,7 @@ class PersonalCollectionRetriever:
         # 4. CrossEncoder Reranker (reusing loaded model if available)
         # -------------------------------------------------------------
         t_rerank_start = time.perf_counter()
-        if self.reranker_model is not None and top_candidates:
+        if ENABLE_RERANKER and self.reranker_model is not None and top_candidates:
             pairs = [[query, self.chunks[cid]["text"]] for cid in top_candidates]
             ce_scores = self.reranker_model.predict(pairs)
             reranked = sorted(
